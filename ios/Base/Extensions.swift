@@ -63,7 +63,7 @@ extension ARtcRemoteAudioStats {
     func toMap() -> Dictionary<String, Any?> {
         return [
             "uid": uid,
-            "quality": quality,
+            "quality": quality.rawValue,
             "networkTransportDelay": networkTransportDelay,
             "jitterBufferDelay": jitterBufferDelay,
             "audioLossRate": audioLossRate,

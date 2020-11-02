@@ -9,7 +9,7 @@ import 'enums.dart';
 import 'events.dart';
 import 'rtc_channel.dart';
 
-/// RtcEngine is the main class of the Agora SDK.
+/// RtcEngine is the main class of the SDK.
 class RtcEngine with RtcEngineInterface {
   static const MethodChannel _methodChannel = MethodChannel('ar_rtc_engine');
   static const EventChannel _eventChannel =
@@ -49,7 +49,7 @@ class RtcEngine with RtcEngineInterface {
   ///   - [ErrorCode.InvalidAppId]
   static Future<RtcEngine> create(String appId) async {
     if (_engine != null) return _engine;
-    await _methodChannel.invokeMethod('create', {
+    _methodChannel.invokeMethod('create', {
       'appId': appId
     });
     _engine = RtcEngine._();

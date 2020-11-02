@@ -262,7 +262,6 @@ class RtcEngineManager: NSObject, RtcEngineInterface {
     }
 
     @objc func joinChannel(_ params: NSDictionary, _ callback: Callback) {
-        print("joinChanneljoinChanneljoinChanneljoinChannel")
         callback.code(engine?.joinChannel(byToken: params["appId"] as? String, channelId: params["channelName"] as! String, uid: params["optionalUid"] as? String))
     }
 
