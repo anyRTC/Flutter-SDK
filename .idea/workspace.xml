@@ -1,47 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/Annotations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/BeanCovertor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/Callback.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/EnumCovertor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/Extensions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcChannel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcChannelEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcEngine.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcEngineEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="add android sdk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/anyrtc/ar_rtc_engine/ArRtcEnginePlugin.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ar_rtc_engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ar_rtc_engine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/kotlin/com/anyrtc/ar_rtc_engine_example/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/rtc_local_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rtc_local_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/classes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/classes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/classes.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/classes.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/enums.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/enums.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/events.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/events.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/rtc_channel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_channel.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/rtc_engine.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_engine.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/rtc_render_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_render_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +47,26 @@
       <option name="presentableId" value="Default" />
       <updated>1604392535020</updated>
     </task>
+    <task id="LOCAL-00001" summary="add android sdk">
+      <created>1604455003290</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604455003291</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add android sdk">
+      <created>1604455128871</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604455128871</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add android sdk" />
+    <option name="LAST_COMMIT_MESSAGE" value="add android sdk" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="127" key="#Project_Structure" timestamp="1604392591275">
@@ -95,33 +77,37 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="568" y="357" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.877@0.23.1440.877" timestamp="1604452244211" />
-    <state x="246" y="71" key="CommitChangelistDialog2" timestamp="1604455044638">
+    <state x="246" y="71" key="CommitChangelistDialog2" timestamp="1604455282667">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="246" y="71" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1604455044638" />
-    <state width="1398" height="219" key="GridCell.Tab.0.bottom" timestamp="1604454845553">
+    <state x="246" y="71" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1604455282667" />
+    <state width="1398" height="258" key="GridCell.Tab.0.bottom" timestamp="1604455658395">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604454845553" />
-    <state width="1398" height="219" key="GridCell.Tab.0.center" timestamp="1604454845553">
+    <state width="1398" height="258" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604455658395" />
+    <state width="1398" height="258" key="GridCell.Tab.0.center" timestamp="1604455658395">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604454845553" />
-    <state width="1398" height="219" key="GridCell.Tab.0.left" timestamp="1604454845552">
+    <state width="1398" height="258" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604455658394" />
+    <state width="1398" height="258" key="GridCell.Tab.0.left" timestamp="1604455658394">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604454845552" />
-    <state width="1398" height="219" key="GridCell.Tab.0.right" timestamp="1604454845553">
+    <state width="1398" height="258" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604455658394" />
+    <state width="1398" height="258" key="GridCell.Tab.0.right" timestamp="1604455658395">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604454845553" />
+    <state width="1398" height="258" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604455658395" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1604393534893">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1604393534893" />
-    <state x="350" y="244" width="706" height="486" key="find.popup" timestamp="1604454141794">
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1604455145239">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="350" y="244" width="706" height="486" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1604454141794" />
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604455145239" />
+    <state x="350" y="244" width="706" height="486" key="find.popup" timestamp="1604455639252">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="350" y="244" width="706" height="486" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1604455639252" />
   </component>
 </project>

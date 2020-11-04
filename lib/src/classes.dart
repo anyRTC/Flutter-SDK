@@ -226,7 +226,7 @@ class AnyrtcImage {
   Map<String, dynamic> toJson() => _$AnyrtcImageToJson(this);
 }
 
-/// The transcodingUser class, which defines the audio and video properties in the CDN live. Agora supports a maximum of 17 transcoding users in a CDN live streaming channel.
+/// The transcodingUser class, which defines the audio and video properties in the CDN live. anyrtc supports a maximum of 17 transcoding users in a CDN live streaming channel.
 @JsonSerializable(explicitToJson: true)
 class TranscodingUser {
   /// ID of the user in the CDN live streaming.
@@ -307,13 +307,13 @@ class Color {
 @JsonSerializable(explicitToJson: true)
 class LiveTranscoding {
   /// Width (pixel) of the video. The default value is 360.
-  /// - When pushing video streams to the CDN, ensure that `width` is at least 64; otherwise, the Agora server adjusts the value to 64.
+  /// - When pushing video streams to the CDN, ensure that `width` is at least 64; otherwise, the anyrtc server adjusts the value to 64.
   /// - When pushing audio streams to the CDN, set `width` and `height` as 0.
   @JsonKey(includeIfNull: false)
   int width;
 
   /// Height (pixel) of the video. The default value is 640.
-  /// - When pushing video streams to the CDN, ensure that `height` is at least 64; otherwise, the Agora server adjusts the value to 64.
+  /// - When pushing video streams to the CDN, ensure that `height` is at least 64; otherwise, the anyrtc server adjusts the value to 64.
   /// - When pushing audio streams to the CDN, set `width` and `height` as 0.
   @JsonKey(includeIfNull: false)
   int height;
@@ -322,11 +322,11 @@ class LiveTranscoding {
   @JsonKey(includeIfNull: false)
   int videoBitrate;
 
-  /// The frame rate (fps) of the video. The value range is [0, 30]. The default value is 15. The Agora server adjusts any value over 30 to 30.
+  /// The frame rate (fps) of the video. The value range is [0, 30]. The default value is 15. The anyrtc server adjusts any value over 30 to 30.
   @JsonKey(includeIfNull: false)
   VideoFrameRate videoFramerate;
 
-  /// Agora does not recommend using this parameter.
+  /// anyrtc does not recommend using this parameter.
   /// - `true`: Low latency with unassured quality.
   /// - `false`: (Default) High latency with assured quality.
   @deprecated
@@ -355,7 +355,7 @@ class LiveTranscoding {
   @JsonKey(includeIfNull: false)
   int audioBitrate;
 
-  /// Agora’s self-defined audio channel type. Agora recommends choosing 1 (mono), or 2 (stereo) audio channels. Special players are required if you choose 3, 4, or 5.
+  /// Anyrtc’s self-defined audio channel type. anyrtc recommends choosing 1 (mono), or 2 (stereo) audio channels. Special players are required if you choose 3, 4, or 5.
   /// See [AudioChannel].
   @JsonKey(includeIfNull: false)
   AudioChannel audioChannels;
@@ -364,7 +364,7 @@ class LiveTranscoding {
   @JsonKey(includeIfNull: false)
   AudioCodecProfileType audioCodecProfile;
 
-  /// Video codec profile type: [VideoCodecProfileType]. Set it as `BASELINE`, `MAIN`, or `HIGH` (default). If you set this parameter to other values, Agora adjusts it to the default value `HIGH`.
+  /// Video codec profile type: [VideoCodecProfileType]. Set it as `BASELINE`, `MAIN`, or `HIGH` (default). If you set this parameter to other values, anyrtc adjusts it to the default value `HIGH`.
   @JsonKey(includeIfNull: false)
   VideoCodecProfileType videoCodecProfile;
 
@@ -377,7 +377,7 @@ class LiveTranscoding {
   @JsonKey(includeIfNull: false)
   String userConfigExtraInfo;
 
-  /// An TranscodingUser object managing the user layout configuration in the CDN live stream. Agora supports a maximum of 17 transcoding users in a CDN live stream channel.
+  /// An TranscodingUser object managing the user layout configuration in the CDN live stream. anyrtc supports a maximum of 17 transcoding users in a CDN live stream channel.
   final List<TranscodingUser> transcodingUsers;
 
   /// Constructs a [LiveTranscoding]
@@ -517,7 +517,7 @@ class Rectangle {
   Map<String, dynamic> toJson() => _$RectangleToJson(this);
 }
 
-/// Agora watermark options. A class for setting the properties of watermark.
+/// anyrtc watermark options. A class for setting the properties of watermark.
 @JsonSerializable(explicitToJson: true)
 class WatermarkOptions {
   /// Whether the watermark image is visible in the local video preview.
@@ -734,10 +734,10 @@ class RtcStats {
   /// Client-server latency.
   int lastmileDelay;
 
-  /// The packet loss rate (%) from the local client to Agora's edge server, before network countermeasures.
+  /// The packet loss rate (%) from the local client to anyrtc's edge server, before network countermeasures.
   int txPacketLossRate;
 
-  /// The packet loss rate (%) from Agora's edge server to the local client, before network countermeasures.
+  /// The packet loss rate (%) from anyrtc's edge server to the local client, before network countermeasures.
   int rxPacketLossRate;
 
   /// System CPU usage (%).
@@ -899,7 +899,7 @@ class LocalAudioStats {
   /// The average sending bitrate (Kbps).
   int sentBitrate;
 
-  /// The video packet loss rate (%) from the local client to the Agora edge server before applying the anti-packet loss strategies.
+  /// The video packet loss rate (%) from the local client to the anyrtc edge server before applying the anti-packet loss strategies.
   ///
   /// @since v3.1.2.
   int txPacketLossRate;
@@ -956,7 +956,7 @@ class LocalVideoStats {
   /// See [VideoCodecType].
   VideoCodecType codecType;
 
-  /// The video packet loss rate (%) from the local client to the Agora edge server before applying the anti-packet loss strategies.
+  /// The video packet loss rate (%) from the local client to the anyrtc edge server before applying the anti-packet loss strategies.
   ///
   /// @since v3.1.2.
   int txPacketLossRate;
