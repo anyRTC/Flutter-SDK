@@ -5,7 +5,8 @@ homepage: https://www.anyrtc.io
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.20.0 <2.0.0"
+#  flutter: ">=1.20.0 <2.0.0"
+  flutter: ">=1.12.13+hotfix.6"
 
 dependencies:
   flutter:
@@ -34,7 +35,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.anyrtc.ar_rtc_engine
+        package: org.ar.rtc_engine
         pluginClass: ArRtcEnginePlugin
       ios:
         pluginClass: ArRtcEnginePlugin

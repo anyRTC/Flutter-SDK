@@ -248,7 +248,7 @@ class RtcTextureView extends StatefulWidget {
     Key key,
     @required this.uid,
     this.channelId,
-    this.renderMode = VideoRenderMode.Hidden,
+    this.renderMode = VideoRenderMode.Fit,
     this.mirrorMode = VideoMirrorMode.Auto,
     this.onPlatformViewCreated,
     this.gestureRecognizers,

@@ -379,7 +379,7 @@ enum AudioReverbPreset {
   @JsonValue(0x00100008)
   FX_PHONOGRAPH,
 
-  /// The reverberation of the virtual stereo. The virtual stereo is an effect that renders the monophonic audio as the stereo audio, so that all users in the channel can hear the stereo voice effect. To achieve better virtual stereo reverberation, Agora recommends setting the `profile` parameter in [RtcEngine.setAudioProfile] as [AudioProfile.MusicHighQualityStereo].
+  /// The reverberation of the virtual stereo. The virtual stereo is an effect that renders the monophonic audio as the stereo audio, so that all users in the channel can hear the stereo voice effect. To achieve better virtual stereo reverberation, anyrtc recommends setting the `profile` parameter in [RtcEngine.setAudioProfile] as [AudioProfile.MusicHighQualityStereo].
   @JsonValue(0x00200001)
   VIRTUAL_STEREO,
 }
@@ -713,7 +713,7 @@ enum ClientRole {
 
 /// Reasons for the connection state change.
 enum ConnectionChangedReason {
-  /// The SDK is connecting to Agora’s edge server.
+  /// The SDK is connecting to anyrtc’s edge server.
   @JsonValue(0)
   Connecting,
 
@@ -721,11 +721,11 @@ enum ConnectionChangedReason {
   @JsonValue(1)
   JoinSuccess,
 
-  /// The connection between the SDK and Agora’s edge server is interrupted.
+  /// The connection between the SDK and anyrtc’s edge server is interrupted.
   @JsonValue(2)
   Interrupted,
 
-  /// The connection between the SDK and Agora’s edge server is banned by Agora’s edge server.
+  /// The connection between the SDK and anyrtc’s edge server is banned by anyrtc’s edge server.
   @JsonValue(3)
   BannedByServer,
 
@@ -771,7 +771,7 @@ enum ConnectionChangedReason {
   @JsonValue(13)
   ClientIpAddressChanged,
 
-  /// Timeout for the keep-alive of the connection between the SDK and Agora’s edge server. The connection state changes to:
+  /// Timeout for the keep-alive of the connection between the SDK and anyrtc’s edge server. The connection state changes to:
   /// - [ConnectionStateType.Reconnecting]
   @JsonValue(14)
   KeepAliveTimeout,
@@ -779,35 +779,35 @@ enum ConnectionChangedReason {
 
 /// Connection states.
 enum ConnectionStateType {
-  /// The SDK is disconnected from Agora's edge server.
+  /// The SDK is disconnected from anyrtc's edge server.
   /// - This is the initial state before [RtcEngine.joinChannel].
   /// - The SDK also enters this state when the app calls [RtcEngine.leaveChannel].
   @JsonValue(1)
   Disconnected,
 
-  /// The SDK is connecting to Agora's edge server.
+  /// The SDK is connecting to anyrtc's edge server.
   /// - When the app calls [RtcEngine.joinChannel], the SDK starts to establish a connection to the specified channel, triggers the [RtcEngineEventHandler.connectionStateChanged] callback, and switches to the [ConnectionStateType.Connecting] state.
   /// - When the SDK successfully joins the channel, the SDK triggers the [RtcEngineEventHandler.connectionStateChanged] callback and switches to the [ConnectionStateType.Connected] state.
   /// - After the SDK joins the channel and when it finishes initializing the media engine, the SDK triggers the [RtcEngineEventHandler.joinChannelSuccess] callback.
   @JsonValue(2)
   Connecting,
 
-  /// The SDK is connected to Agora's edge server and joins a channel. You can now publish or subscribe to a media stream in the channel.
+  /// The SDK is connected to anyrtc's edge server and joins a channel. You can now publish or subscribe to a media stream in the channel.
   /// If the connection to the channel is lost because, for example, the network is down or switched, the SDK automatically tries to reconnect and triggers:
   /// - The [RtcEngineEventHandler.connectionStateChanged] callback, and switches to the [ConnectionStateType.Reconnecting] state.
   @JsonValue(3)
   Connected,
 
   /// The SDK keeps rejoining the channel after being disconnected from a joined channel because of network issues.
-  /// - If the SDK cannot rejoin the channel within 10 seconds after being disconnected from Agora’s edge server, the SDK triggers the [RtcEngineEventHandler.connectionLost] callback, stays in the [ConnectionStateType.Reconnecting] state, and keeps rejoining the channel.
-  /// - If the SDK fails to rejoin the channel 20 minutes after being disconnected from Agora’s edge server, the SDK triggers the [RtcEngineEventHandler.connectionStateChanged] callback, switches to the [ConnectionStateType.Failed] state, and stops rejoining the channel.
+  /// - If the SDK cannot rejoin the channel within 10 seconds after being disconnected from anyrtc’s edge server, the SDK triggers the [RtcEngineEventHandler.connectionLost] callback, stays in the [ConnectionStateType.Reconnecting] state, and keeps rejoining the channel.
+  /// - If the SDK fails to rejoin the channel 20 minutes after being disconnected from anyrtc’s edge server, the SDK triggers the [RtcEngineEventHandler.connectionStateChanged] callback, switches to the [ConnectionStateType.Failed] state, and stops rejoining the channel.
   @JsonValue(4)
   Reconnecting,
 
-  /// The SDK fails to connect to Agora's edge server or join the channel.
+  /// The SDK fails to connect to anyrtc's edge server or join the channel.
   /// You must call [RtcEngine.leaveChannel] to leave this state, and call [RtcEngine.joinChannel] again to rejoin the channel.
   ///
-  /// If the SDK is banned from joining the channel by Agora’s edge server (through the RESTful API), the SDK triggers the [RtcEngineEventHandler.connectionStateChanged] callbacks.
+  /// If the SDK is banned from joining the channel by anyrtc’s edge server (through the RESTful API), the SDK triggers the [RtcEngineEventHandler.connectionStateChanged] callbacks.
   @JsonValue(5)
   Failed,
 }
@@ -963,16 +963,16 @@ enum ErrorCode {
   @JsonValue(103)
   NoServerResources,
 
-  /// The token expired. Agora recommends that you use [ConnectionChangedReason.TokenExpired] in the reason parameter of [RtcEngineEventHandler.connectionStateChanged] instead.
+  /// The token expired. anyrtc recommends that you use [ConnectionChangedReason.TokenExpired] in the reason parameter of [RtcEngineEventHandler.connectionStateChanged] instead.
   ///
   /// Possible reasons are:
-  /// - Authorized Timestamp expired: The timestamp is represented by the number of seconds elapsed since 1/1/1970. The user can use the token to access the Agora service within five minutes after the token is generated. If the user does not access the Agora service after five minutes, this token is no longer valid.
-  /// - Call Expiration Timestamp expired: The timestamp is the exact time when a user can no longer use the Agora service (for example, when a user is forced to leave an ongoing call). When a value is set for the Call Expiration Timestamp, it does not mean that the token will expire, but that the user will be banned from the channel.
+  /// - Authorized Timestamp expired: The timestamp is represented by the number of seconds elapsed since 1/1/1970. The user can use the token to access the anyrtc service within five minutes after the token is generated. If the user does not access the anyrtc service after five minutes, this token is no longer valid.
+  /// - Call Expiration Timestamp expired: The timestamp is the exact time when a user can no longer use the anyrtc service (for example, when a user is forced to leave an ongoing call). When a value is set for the Call Expiration Timestamp, it does not mean that the token will expire, but that the user will be banned from the channel.
   @deprecated
   @JsonValue(109)
   TokenExpired,
 
-  /// The token is invalid. Agora recommends that you use [ConnectionChangedReason.InvalidToken] in the reason parameter of [RtcEngineEventHandler.connectionStateChanged] instead.
+  /// The token is invalid. anyrtc recommends that you use [ConnectionChangedReason.InvalidToken] in the reason parameter of [RtcEngineEventHandler.connectionStateChanged] instead.
   ///
   /// Possible reasons are:
   /// - The App Certificate for the project is enabled in Console, but the user is using the App ID. Once the App Certificate is enabled, the user must use a token.
@@ -981,11 +981,11 @@ enum ErrorCode {
   @JsonValue(110)
   InvalidToken,
 
-  /// The Internet connection is interrupted. This applies to the Agora Web SDK only.
+  /// The Internet connection is interrupted. This applies to the anyrtc Web SDK only.
   @JsonValue(111)
   ConnectionInterrupted,
 
-  /// The Internet connection is lost. This applies to the Agora Web SDK only.
+  /// The Internet connection is lost. This applies to the anyrtc Web SDK only.
   @JsonValue(112)
   ConnectionLost,
 
@@ -1057,7 +1057,7 @@ enum ErrorCode {
   @JsonValue(153)
   PublishStreamNotAuthorized,
 
-  /// An error occurs in Agora’s streaming server. Call the `addPublishStreamUrl` method to publish the stream again.
+  /// An error occurs in anyrtc’s streaming server. Call the `addPublishStreamUrl` method to publish the stream again.
   ///
   /// See [RtcEngine.addPublishStreamUrl]
   @JsonValue(154)
@@ -1079,7 +1079,7 @@ enum ErrorCode {
   @JsonValue(1002)
   StartCall,
 
-  /// Fails to start the camera. Agora recommends that you use [LocalVideoStreamError.CaptureFailure] in the error parameter of [RtcEngineEventHandler.localVideoStateChanged] instead.
+  /// Fails to start the camera. anyrtc recommends that you use [LocalVideoStreamError.CaptureFailure] in the error parameter of [RtcEngineEventHandler.localVideoStateChanged] instead.
   @deprecated
   @JsonValue(1003)
   StartCamera,
@@ -1428,7 +1428,7 @@ enum RtmpStreamingErrorCode {
   @JsonValue(3)
   ConnectionTimeout,
 
-  /// An error occurs in Agora’s streaming server. Call the [RtcEngine.addPublishStreamUrl] method to publish the streaming again.
+  /// An error occurs in anyrtc’s streaming server. Call the [RtcEngine.addPublishStreamUrl] method to publish the streaming again.
   @JsonValue(4)
   InternalServerError,
 
@@ -1448,7 +1448,7 @@ enum RtmpStreamingErrorCode {
   @JsonValue(8)
   NotAuthorized,
 
-  /// Agora’s server fails to find the RTMP streaming.
+  /// anyrtc’s server fails to find the RTMP streaming.
   @JsonValue(9)
   StreamNotFound,
 
@@ -1463,7 +1463,7 @@ enum RtmpStreamingState {
   @JsonValue(0)
   Idle,
 
-  /// The SDK is connecting to Agora’s streaming server and the RTMP server. This state is triggered after you call the [RtcEngine.addPublishStreamUrl] method.
+  /// The SDK is connecting to anyrtc’s streaming server and the RTMP server. This state is triggered after you call the [RtcEngine.addPublishStreamUrl] method.
   @JsonValue(1)
   Connecting,
 
@@ -1800,7 +1800,7 @@ enum WarningCode {
   @JsonValue(104)
   LookupChannelTimeout,
 
-  /// The server rejects the request to look up the channel. The server cannot process this request or the request is illegal. Agora recommends that you use [ConnectionChangedReason.RejectedByServer] in the reason parameter of [RtcEngineEventHandler.connectionStateChanged] instead.
+  /// The server rejects the request to look up the channel. The server cannot process this request or the request is illegal. anyrtc recommends that you use [ConnectionChangedReason.RejectedByServer] in the reason parameter of [RtcEngineEventHandler.connectionStateChanged] instead.
   @deprecated
   @JsonValue(105)
   LookupChannelRejected,
@@ -1888,7 +1888,7 @@ enum WarningCode {
   @JsonValue(1040)
   AdmNoDataReadyCallback,
 
-  /// Audio device module: The audio recording device is different from the audio playback device, which may cause echoes problem. Agora recommends using the same audio device to record and playback audio.
+  /// Audio device module: The audio recording device is different from the audio playback device, which may cause echoes problem. anyrtc recommends using the same audio device to record and playback audio.
   ///
   /// @since v3.1.2.
   @JsonValue(1042)

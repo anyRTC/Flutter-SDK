@@ -9,28 +9,6 @@ import './src/rtc_render_view.dart';
 /// (Android only) SurfaceView.
 ///
 /// Please use [UIView](https://developer.apple.com/documentation/uikit/uiview) for iOS.
-class SurfaceView extends RtcSurfaceView {
-  /// Constructs a [SurfaceView]
-  SurfaceView({
-    Key key,
-    bool zOrderMediaOverlay = false,
-    bool zOrderOnTop = false,
-    VideoRenderMode renderMode = VideoRenderMode.Hidden,
-    String channelId,
-    VideoMirrorMode mirrorMode = VideoMirrorMode.Auto,
-    Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
-    PlatformViewCreatedCallback onPlatformViewCreated,
-  }) : super(
-            key: key,
-            zOrderMediaOverlay: zOrderMediaOverlay,
-            zOrderOnTop: zOrderOnTop,
-            renderMode: renderMode,
-            channelId: channelId,
-            mirrorMode: mirrorMode,
-            gestureRecognizers: gestureRecognizers,
-            onPlatformViewCreated: onPlatformViewCreated,
-            uid: "0");
-}
 
 /// (Android only) TextureView.
 class TextureView extends RtcTextureView {

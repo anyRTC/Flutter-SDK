@@ -34,7 +34,7 @@ class RtcEngine with RtcEngineInterface {
 
   /// Creates an [RtcEngine] instance.
   ///
-  /// Unless otherwise specified, all the methods provided by the RtcEngine class are executed asynchronously. Agora recommends calling these methods in the same thread.
+  /// Unless otherwise specified, all the methods provided by the RtcEngine class are executed asynchronously. anyrtc recommends calling these methods in the same thread.
   ///
   /// **Note**
   /// - You must create an [RtcEngine] instance before calling any other method.
@@ -585,7 +585,7 @@ mixin RtcEngineInterface
         RtcAudioRecorderInterface,
         RtcInjectStreamInterface,
         RtcCameraInterface {
-  /// Destroys the [RtcEngine] instance and releases all resources used by the Agora SDK.
+  /// Destroys the [RtcEngine] instance and releases all resources used by the RTC SDK.
   ///
   /// This method is useful for apps that occasionally make voice or video calls, to free up resources for other operations when not making calls.
   ///
@@ -594,11 +594,11 @@ mixin RtcEngineInterface
   /// - Once the app calls [RtcEngine.destroy] to destroy the created [RtcEngine] instance, you cannot use any method or callback in the SDK.
   Future<void> destroy();
 
-  /// Sets the channel profile of the Agora RtcEngine.
+  /// Sets the channel profile of the RtcEngine.
   ///
-  /// The Agora RtcEngine differentiates channel profiles and applies different optimization algorithms accordingly. For example, it prioritizes smoothness and low latency for a video call, and prioritizes video quality for a video broadcast.
+  /// The  RtcEngine differentiates channel profiles and applies different optimization algorithms accordingly. For example, it prioritizes smoothness and low latency for a video call, and prioritizes video quality for a video broadcast.
   ///
-  /// **Parameter** [profile] The channel profile of the Agora RtcEngine. See [ChannelProfile].
+  /// **Parameter** [profile] The channel profile of the  RtcEngine. See [ChannelProfile].
   Future<void> setChannelProfile(ChannelProfile profile);
 
   /// Sets the role of a user ([ChannelProfile.LiveBroadcasting] only).
@@ -619,7 +619,7 @@ mixin RtcEngineInterface
   /// - The local client: [RtcEngineEventHandler.joinChannelSuccess].
   /// - The remote client: [RtcEngineEventHandler.userJoined], if the user joining the channel is in the [ChannelProfile.Communication] profile, or is a [ClientRole.Broadcaster] in the [ChannelProfile.LiveBroadcasting] profile.
   ///
-  /// When the connection between the client and Agora's server is interrupted due to poor network conditions, the SDK tries reconnecting to the server. When the local client successfully rejoins the channel, the SDK triggers the [RtcEngineEventHandler.rejoinChannelSuccess] callback on the local client.
+  /// When the connection between the client and  server is interrupted due to poor network conditions, the SDK tries reconnecting to the server. When the local client successfully rejoins the channel, the SDK triggers the [RtcEngineEventHandler.rejoinChannelSuccess] callback on the local client.
   ///
   /// **Note**
   /// - A channel does not accept duplicate uids, such as two users with the same uid. If you set uid as 0, the system automatically assigns a uid.
@@ -720,7 +720,7 @@ mixin RtcEngineInterface
 
   /// @nodoc Provides technical preview functionalities or special customizations by configuring the SDK with JSON options.
   ///
-  /// The JSON options are not public by default. Agora is working on making commonly used JSON options public in a standard way.
+  /// The JSON options are not public by default.  is working on making commonly used JSON options public in a standard way.
   ///
   /// **Parameter** [parameters] Sets the parameter as a JSON string in the specified format.
   Future<void> setParameters(String parameters);
@@ -767,7 +767,7 @@ mixin RtcAudioInterface {
   /// Adjusts the recording volume.
   ///
   /// **Note**
-  /// - To avoid echoes and improve call quality, Agora recommends setting the value of volume between 0 and 100. If you need to set the value higher than 100, contact hi@dync.cc first.
+  /// - To avoid echoes and improve call quality,  recommends setting the value of volume between 0 and 100. If you need to set the value higher than 100, contact hi@dync.cc first.
   ///
   /// **Parameter** [volume] Recording volume. The value ranges between 0 and 400:
   /// - 0: Mute.
@@ -796,7 +796,7 @@ mixin RtcAudioInterface {
   /// **Note**
   /// - This method adjusts the playback volume which is mixed volume of all remote users.
   /// - To mute the local audio playback, call both [RtcEngine.adjustPlaybackSignalVolume] and [RtcEngine.adjustAudioMixingVolume], and set volume as 0.
-  /// - To avoid echoes and improve call quality, Agora recommends setting the value of volume between 0 and 100. If you need to set the value higher than 100, contact hi@dync.cc first.
+  /// - To avoid echoes and improve call quality,  recommends setting the value of volume between 0 and 100. If you need to set the value higher than 100, contact hi@dync.cc first.
   ///
   /// **Parameter** [volume] The playback volume of all remote users. The value ranges from 0 to 400:
   /// - 0: Mute.
@@ -1014,7 +1014,7 @@ mixin RtcAudioMixingInterface {
   /// - This method supports both Android and iOS. To use this method in Android, ensure that the Android device is v4.2 or later, and the API version is v16 or later.
   /// - Call this method when you are in the channel, otherwise it may cause issues.
   /// - If you want to play an online music file, ensure that the time interval between calling this method is more than 100 ms, or the [AudioMixingErrorCode.TooFrequentCall] error occurs.
-  /// - If you want to play an online music file, Agora does not recommend using the redirected URL address. Some Android devices may fail to open a redirected URL address.
+  /// - If you want to play an online music file,  does not recommend using the redirected URL address. Some Android devices may fail to open a redirected URL address.
   /// - If the local audio mixing file does not exist, or if the SDK does not support the file format or cannot access the music file URL, the SDK returns [AudioMixingErrorCode.CanNotOpen].
   /// - If you call this method on an emulator, only the MP3 file format is supported.
   ///
@@ -1150,8 +1150,8 @@ mixin RtcAudioEffectInterface {
   /// **Parameter** [gain] Sets the volume of the audio effect. The value ranges between 0.0 and 100,0. The default value is 100.0. The lower the value, the lower the volume of the audio effect.
   ///
   /// **Parameter** [publish] Set whether or not to publish the specified audio effect to the remote stream:
-  /// - `true`: The locally played audio effect is published to the Agora Cloud and the remote users can hear it.
-  /// - `false`: The locally played audio effect is not published to the Agora Cloud and the remote users cannot hear it.
+  /// - `true`: The locally played audio effect is published to the  Cloud and the remote users can hear it.
+  /// - `false`: The locally played audio effect is not published to the  Cloud and the remote users cannot hear it.
   Future<void> playEffect(int soundId, String filePath, int loopCount,
       double pitch, double pan, double gain, bool publish);
 

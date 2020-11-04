@@ -223,7 +223,7 @@ mixin RtcChannelInterface
   /// In the following situations, the SDK decides that the current token has expired:
   /// - The SDK triggers the [RtcChannelEventHandler.tokenPrivilegeWillExpire] callback, or
   /// - The [RtcChannelEventHandler.connectionStateChanged] callback reports the [ConnectionChangedReason.TokenExpired] error.
-  /// You should get a new token from your server and call this method to renew it. Failure to do so results in the SDK disconnecting from the Agora server.
+  /// You should get a new token from your server and call this method to renew it. Failure to do so results in the SDK disconnecting from the anyrtc server.
   /// **Parameter** [token] The new token.
   Future<void> renewToken(String token);
 

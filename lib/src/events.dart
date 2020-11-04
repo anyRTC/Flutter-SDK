@@ -216,7 +216,7 @@ class RtcEngineEventHandler {
   ///
   /// There are two reasons for users to become offline:
   /// - Leave the channel: When the user/host leaves the channel, the user/host sends a goodbye message. When this message is received, the SDK determines that the user/host leaves the channel.
-  /// - Drop offline: When no data packet of the user or host is received for a certain period of time (20 seconds for the [ChannelProfile.Communication] profile, and more for the [ChannelProfile.LiveBroadcasting] profile), the SDK assumes that the user/host drops offline. A poor network connection may lead to false detections, so we recommend using the Agora RTM SDK for reliable offline detection.
+  /// - Drop offline: When no data packet of the user or host is received for a certain period of time (20 seconds for the [ChannelProfile.Communication] profile, and more for the [ChannelProfile.LiveBroadcasting] profile), the SDK assumes that the user/host drops offline. A poor network connection may lead to false detections, so we recommend using the  RTM SDK for reliable offline detection.
   ///
   /// The `UserOfflineCallback` typedef includes the following parameters:
   /// - [int] `uid`: ID of the user or host who leaves the channel or goes offline.
@@ -225,7 +225,7 @@ class RtcEngineEventHandler {
 
   /// Occurs when the network connection state changes.
   ///
-  /// The Agora SDK returns this callback to report on the current network connection state when it changes, and the reason to such change.
+  /// The SDK returns this callback to report on the current network connection state when it changes, and the reason to such change.
   ///
   /// The `ConnectionStateCallback` typedef includes the following parameters:
   /// - [ConnectionStateType] `state`: The current network connection state.
@@ -240,10 +240,10 @@ class RtcEngineEventHandler {
   /// - [NetworkType] `type`: The network type.
   NetworkTypeCallback networkTypeChanged;
 
-  /// Occurs when the SDK cannot reconnect to Agora's edge server 10 seconds after its connection to the server is interrupted.
+  /// Occurs when the SDK cannot reconnect to anyrtc's edge server 10 seconds after its connection to the server is interrupted.
   ///
   /// The SDK triggers this callback when it cannot connect to the server 10 seconds after calling [RtcEngine.joinChannel], regardless of whether it is in the channel or not.
-  /// If the SDK fails to rejoin the channel 20 minutes after being disconnected from Agora's edge server, the SDK stops rejoining the channel.
+  /// If the SDK fails to rejoin the channel 20 minutes after being disconnected from anyrtc's edge server, the SDK stops rejoining the channel.
   ///
   /// The `EmptyCallback` typedef does not include any parameter.
   EmptyCallback connectionLost;
@@ -436,7 +436,7 @@ class RtcEngineEventHandler {
   /// **Note**
   /// - If the SDK does not detect a face, it reduces the frequency of this callback to reduce power consumption on the local device.
   /// - The SDK stops triggering this callback when a human face is in close proximity to the screen.
-  /// - On Android, the distance value reported in this callback may be slightly different from the actual distance. Therefore, Agora does not recommend using it for accurate calculation.
+  /// - On Android, the distance value reported in this callback may be slightly different from the actual distance. Therefore, anyrtc does not recommend using it for accurate calculation.
   ///
   /// `The FacePositionCallback` typedef includes the following parameters:
   /// - [int] `imageWidth`: The width (px) of the local video.
@@ -450,7 +450,7 @@ class RtcEngineEventHandler {
   /// - [RtcStats] `stats`: Statistics of the call.
   RtcStatsCallback rtcStats;
 
-  /// Reports the last mile network quality of the local user once every two seconds before the user joins the channel. Last mile refers to the connection between the local device and Agora's edge server. After the application calls the [RtcEngine.enableLastmileTest] method, this callback reports once every two seconds the uplink and downlink last mile network conditions of the local user before the user joins the channel.
+  /// Reports the last mile network quality of the local user once every two seconds before the user joins the channel. Last mile refers to the connection between the local device and anyrtc's edge server. After the application calls the [RtcEngine.enableLastmileTest] method, this callback reports once every two seconds the uplink and downlink last mile network conditions of the local user before the user joins the channel.
   ///
   /// The `NetworkQualityCallback` typedef includes the following parameter:
   /// - [NetworkQuality] `quality`: The last mile network quality based on the uplink and downlink packet loss rate and jitter.
@@ -458,7 +458,7 @@ class RtcEngineEventHandler {
 
   /// Reports the last mile network quality of each user in the channel once every two seconds.
   ///
-  /// Last mile refers to the connection between the local device and Agora's edge server. This callback reports once every two seconds the last mile network conditions of each user in the channel. If a channel includes multiple users, then this callback will be triggered as many times.
+  /// Last mile refers to the connection between the local device and anyrtc's edge server. This callback reports once every two seconds the last mile network conditions of each user in the channel. If a channel includes multiple users, then this callback will be triggered as many times.
   ///
   /// The `NetworkQualityWithUidCallback` typedef includes the following parameters:
   /// - [int] `uid`：User ID. The network quality of the user with this uid is reported. If `uid` is 0, the local network quality is reported.
@@ -517,7 +517,7 @@ class RtcEngineEventHandler {
 
   /// Occurs when the state of the local user's audio mixing file changes.
   ///
-  /// When you call the [RtcEngine.startAudioMixing] method and the state of audio mixing file changes, the Agora SDK triggers this callback.
+  /// When you call the [RtcEngine.startAudioMixing] method and the state of audio mixing file changes, the anyrtc SDK triggers this callback.
   /// - When the audio mixing file plays, pauses playing, or stops playing, this callback returns 710, 711, or 713 in state, and 0 in the `errorCode` parameter.
   /// - When exceptions occur during playback, this callback returns 714 in state and an error in the `errorCode` parameter.
   /// - If the local audio mixing file does not exist, or if the SDK does not support the file format or cannot access the music file URL, the SDK returns [WarningCode.AudioMixingOpenError] = 701.
@@ -822,12 +822,12 @@ class RtcEngineEventHandler {
   /// - The SDK triggers the [RtcEngineEventHandler.connectionInterrupted] callback when the SDK loses connection with the server for more than four seconds after it joins the channel.
   /// - The SDK triggers the [RtcEngineEventHandler.connectionLost] callback when it loses connection with the server for more than 10 seconds, regardless of whether it joins the channel or not.
   ///
-  /// If the SDK fails to rejoin the channel 20 minutes after being disconnected from Agora's edge server, the SDK stops rejoining the channel.
+  /// If the SDK fails to rejoin the channel 20 minutes after being disconnected from anyrtc's edge server, the SDK stops rejoining the channel.
   /// The `EmptyCallback` typedef does not include any parameter.
   @deprecated
   EmptyCallback connectionInterrupted;
 
-  /// Occurs when your connection is banned by the Agora Server.
+  /// Occurs when your connection is banned by the anyrtc Server.
   ///
   /// **Deprecated** Use [RtcEngineEventHandler.connectionStateChanged] instead.
   /// The `EmptyCallback` typedef does not include any parameter.
@@ -1446,7 +1446,7 @@ class RtcChannelEventHandler {
   ///
   /// There are two reasons for users to become offline:
   /// - Leave the channel: When the user/broadcaster leaves the channel, the user/broadcaster sends a goodbye message. When this message is received, the SDK determines that the user/host leaves the channel.
-  /// - Go offline: When no data packet of the user or broadcaster is received for a certain period of time (around 20 seconds), the SDK assumes that the user/broadcaster drops offline. A poor network connection may lead to false detections, so we recommend using the Agora RTM SDK for reliable offline detection.
+  /// - Go offline: When no data packet of the user or broadcaster is received for a certain period of time (around 20 seconds), the SDK assumes that the user/broadcaster drops offline. A poor network connection may lead to false detections, so we recommend using the anyrtc RTM SDK for reliable offline detection.
   ///
   /// The `UserOfflineCallback` typedef includes the following parameters:
   /// - [int] `uid`: ID of the user or host who leaves the channel or goes offline.
@@ -1455,17 +1455,17 @@ class RtcChannelEventHandler {
 
   /// Occurs when the network connection state changes.
   ///
-  /// The Agora SDK triggers this callback to report on the current network connection state when it changes, and the reason to such change.
+  /// The anyrtc SDK triggers this callback to report on the current network connection state when it changes, and the reason to such change.
   ///
   /// The `ConnectionStateCallback` typedef includes the following parameters:
   /// - [ConnectionStateType] `state`: The current network connection state.
   /// - [ConnectionChangedReason] `reason`: The reason causing the change of the connection state.
   ConnectionStateCallback connectionStateChanged;
 
-  /// Occurs when the SDK cannot reconnect to Agora's edge server 10 seconds after its connection to the server is interrupted.
+  /// Occurs when the SDK cannot reconnect to anyrtc's edge server 10 seconds after its connection to the server is interrupted.
   ///
   /// The SDK also triggers this callback when it cannot connect to the server 10 seconds after calling [RtcChannel.joinChannel], regardless of whether it is in the channel or not.
-  /// If the SDK fails to rejoin the channel 20 minutes after being disconnected from Agora's edge server, the SDK stops rejoining the channel.
+  /// If the SDK fails to rejoin the channel 20 minutes after being disconnected from anyrtc's edge server, the SDK stops rejoining the channel.
   /// The `EmptyCallback` typedef does not include any parameter.
   EmptyCallback connectionLost;
 
@@ -1557,7 +1557,7 @@ class RtcChannelEventHandler {
 
   /// Reports the last mile network quality of each user in the channel once every two seconds.
   ///
-  /// Last mile refers to the connection between the local device and Agora's edge server. This callback reports once every two seconds the last mile network conditions of each user in the channel. If a channel includes multiple users, then this callback will be triggered as many times.
+  /// Last mile refers to the connection between the local device and anyrtc's edge server. This callback reports once every two seconds the last mile network conditions of each user in the channel. If a channel includes multiple users, then this callback will be triggered as many times.
   ///
   /// The `NetworkQualityWithUidCallback` typedef includes the following parameters:
   /// - [int] `uid`：User ID. The network quality of the user with this uid is reported. If `uid` is 0, the local network quality is reported.

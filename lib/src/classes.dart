@@ -86,7 +86,7 @@ class VideoEncoderConfiguration {
   ///              - In the Communication profile, the video bitrate is the same as the base bitrate.
   ///              - In the LiveBroadcasting profile, the video bitrate is twice the base bitrate.
   ///     - [BitRate.Compatible]: The compatible bitrate mode. In this mode, the bitrate stays the same regardless of the profile. If you choose this mode for the Live Broadcast profile, the video frame rate may be lower than the set value.
-  /// Agora uses different video codecs for different profiles to optimize the user experience. For example, the Communication profile prioritizes the smoothness while the Live Broadcast profile prioritizes the video quality (a higher bitrate). Therefore, We recommend setting this parameter as `0`.
+  ///  uses different video codecs for different profiles to optimize the user experience. For example, the Communication profile prioritizes the smoothness while the Live Broadcast profile prioritizes the video quality (a higher bitrate). Therefore, We recommend setting this parameter as `0`.
   ///
   /// **Video Bitrate Table**
   ///
@@ -124,7 +124,7 @@ class VideoEncoderConfiguration {
   @JsonKey(includeIfNull: false)
   int bitrate;
 
-  /// The minimum encoding bitrate (Kbps). The Agora SDK automatically adjusts the encoding bitrate to adapt to the network conditions. Using a value greater than the default value forces the video encoder to output high-quality images but may cause more packet loss and hence sacrifice the smoothness of the video transmission. That said, unless you have special requirements for image quality, Agora does not recommend changing this value.
+  /// The minimum encoding bitrate (Kbps). The  SDK automatically adjusts the encoding bitrate to adapt to the network conditions. Using a value greater than the default value forces the video encoder to output high-quality images but may cause more packet loss and hence sacrifice the smoothness of the video transmission. That said, unless you have special requirements for image quality,  does not recommend changing this value.
   @JsonKey(includeIfNull: false)
   int minBitrate;
 
@@ -197,9 +197,9 @@ class BeautyOptions {
   Map<String, dynamic> toJson() => _$BeautyOptionsToJson(this);
 }
 
-/// Agora image properties. A class for setting the properties of the watermark and background images.
+///  image properties. A class for setting the properties of the watermark and background images.
 @JsonSerializable(explicitToJson: true)
-class AgoraImage {
+class AnyrtcImage {
   /// HTTP/HTTPS URL address of the image on the broadcasting video. The maximum length of this parameter is 1024 bytes.
   final String url;
 
@@ -215,15 +215,15 @@ class AgoraImage {
   /// Height of the image on the broadcasting video.
   final int height;
 
-  /// Constructs a [AgoraImage]
-  AgoraImage(this.url, this.x, this.y, this.width, this.height);
+  /// Constructs a [AnyrtcImage]
+  AnyrtcImage(this.url, this.x, this.y, this.width, this.height);
 
   /// @nodoc
-  factory AgoraImage.fromJson(Map<String, dynamic> json) =>
-      _$AgoraImageFromJson(json);
+  factory AnyrtcImage.fromJson(Map<String, dynamic> json) =>
+      _$AnyrtcImageFromJson(json);
 
   /// @nodoc
-  Map<String, dynamic> toJson() => _$AgoraImageToJson(this);
+  Map<String, dynamic> toJson() => _$AnyrtcImageToJson(this);
 }
 
 /// The transcodingUser class, which defines the audio and video properties in the CDN live. Agora supports a maximum of 17 transcoding users in a CDN live streaming channel.
@@ -338,14 +338,14 @@ class LiveTranscoding {
   int videoGop;
 
   /// The watermark image added to the CDN live publishing stream. Ensure that the format of the image is PNG. Once a watermark image is added, the audience of the CDN live publishing stream can see it.
-  /// See [AgoraImage].
+  /// See [AnyrtcImage].
   @JsonKey(includeIfNull: false)
-  AgoraImage watermark;
+  AnyrtcImage watermark;
 
   /// The background image added to the CDN live publishing stream. Once a background image is added, the audience of the CDN live publishing stream can see it.
-  /// See [AgoraImage].
+  /// See [AnyrtcImage].
   @JsonKey(includeIfNull: false)
-  AgoraImage backgroundImage;
+  AnyrtcImage backgroundImage;
 
   /// Self-defined audio-sample rate: [AudioSampleRateType].
   @JsonKey(includeIfNull: false)
