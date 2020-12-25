@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="">
+    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="update android">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,17 +18,17 @@
   <component name="ProjectId" id="1jlxZUc1xxIhvyucSuUapI0Hqam" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/android/src/main" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="flutter.settings" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -67,12 +69,34 @@
       <option name="project" value="LOCAL" />
       <updated>1604455913975</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update android">
+      <created>1604458359753</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604458359753</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update android">
+      <created>1604458376259</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604458376259</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update android">
+      <created>1604995659173</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604995659173</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add android sdk" />
-    <option name="LAST_COMMIT_MESSAGE" value="add android sdk" />
+    <MESSAGE value="update android" />
+    <option name="LAST_COMMIT_MESSAGE" value="update android" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="127" key="#Project_Structure" timestamp="1604392591275">
@@ -83,41 +107,45 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="568" y="357" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.877@0.23.1440.877" timestamp="1604452244211" />
-    <state x="246" y="71" key="CommitChangelistDialog2" timestamp="1604458359523">
+    <state x="246" y="71" key="CommitChangelistDialog2" timestamp="1604995658829">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="246" y="71" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1604458359523" />
-    <state width="1398" height="28" key="GridCell.Tab.0.bottom" timestamp="1604458176357">
+    <state x="246" y="71" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1604995658829" />
+    <state width="1398" height="149" key="GridCell.Tab.0.bottom" timestamp="1608536181655">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="28" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604458176357" />
-    <state width="1398" height="28" key="GridCell.Tab.0.center" timestamp="1604458176357">
+    <state width="1398" height="149" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1608536181655" />
+    <state width="1398" height="149" key="GridCell.Tab.0.center" timestamp="1608536181655">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="28" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604458176357" />
-    <state width="1398" height="28" key="GridCell.Tab.0.left" timestamp="1604458176356">
+    <state width="1398" height="149" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1608536181655" />
+    <state width="1398" height="149" key="GridCell.Tab.0.left" timestamp="1608536181655">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="28" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604458176356" />
-    <state width="1398" height="28" key="GridCell.Tab.0.right" timestamp="1604458176357">
+    <state width="1398" height="149" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1608536181655" />
+    <state width="1398" height="149" key="GridCell.Tab.0.right" timestamp="1608536181655">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="28" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604458176357" />
-    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1604458342757">
+    <state width="1398" height="149" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1608536181655" />
+    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1604995566925">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1604458342757" />
-    <state x="221" y="100" key="SettingsEditor" timestamp="1604393534893">
+    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1604995566925" />
+    <state x="221" y="100" key="SettingsEditor" timestamp="1607923086527">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1604393534893" />
-    <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1604455925298">
+    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1607923086527" />
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1604458384825">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="362" y="211" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604455925298" />
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604458384825" />
     <state x="350" y="244" width="706" height="486" key="find.popup" timestamp="1604455639252">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="350" y="244" width="706" height="486" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1604455639252" />
+    <state x="733" y="260" key="git4idea.merge.GitPullDialog" timestamp="1604995578184">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="733" y="260" key="git4idea.merge.GitPullDialog/0.23.1440.877@0.23.1440.877" timestamp="1604995578184" />
   </component>
 </project>

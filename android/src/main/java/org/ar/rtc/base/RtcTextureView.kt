@@ -23,8 +23,14 @@ class RtcTextureView(
             throw RuntimeException("Please init RtcEngine first!")
         }
         canvas = VideoCanvas(texture)
-        addView(texture)
+
+        //addView(texture)
+
+        addView(texture,LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT).apply {
+            addRule(CENTER_IN_PARENT)
+        })
     }
+
 
     fun setData(engine: RtcEngine, channel: RtcChannel?, uid: String) {
         this.channel = if (channel != null) WeakReference(channel) else null
