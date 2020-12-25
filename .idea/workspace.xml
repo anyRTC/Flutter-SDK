@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="" />
+    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcEnginePlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcEnginePlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rtc_local_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rtc_local_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rtc_remote_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rtc_remote_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/rtc_render_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_render_view.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +27,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/android/src/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -28,6 +36,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base" />
       <recent name="$PROJECT_DIR$/android/src/main" />
       <recent name="$PROJECT_DIR$/android/src/main/kotlin/com/anyrtc/ar_rtc_engine" />
     </key>
@@ -92,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608876403707</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update android">
+      <created>1608876532585</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608876532585</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -109,26 +125,34 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="568" y="357" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.877@0.23.1440.877" timestamp="1604452244211" />
-    <state x="246" y="71" key="CommitChangelistDialog2" timestamp="1604995658829">
+    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1608876532476">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="246" y="71" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1604995658829" />
-    <state width="1398" height="149" key="GridCell.Tab.0.bottom" timestamp="1608536181655">
+    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1608876532476" />
+    <state width="1398" height="236" key="GridCell.Tab.0.bottom" timestamp="1608878045041">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="149" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1608536181655" />
-    <state width="1398" height="149" key="GridCell.Tab.0.center" timestamp="1608536181655">
+    <state width="1398" height="236" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1608878045041" />
+    <state width="1398" height="236" key="GridCell.Tab.0.center" timestamp="1608878045041">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="149" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1608536181655" />
-    <state width="1398" height="149" key="GridCell.Tab.0.left" timestamp="1608536181655">
+    <state width="1398" height="236" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1608878045041" />
+    <state width="1398" height="236" key="GridCell.Tab.0.left" timestamp="1608878045040">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="149" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1608536181655" />
-    <state width="1398" height="149" key="GridCell.Tab.0.right" timestamp="1608536181655">
+    <state width="1398" height="236" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1608878045040" />
+    <state width="1398" height="236" key="GridCell.Tab.0.right" timestamp="1608878045041">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="149" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1608536181655" />
+    <state width="1398" height="236" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1608878045041" />
+    <state x="96" y="95" width="1221" height="723" key="MergeDialog" timestamp="1608876522234">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="96" y="95" width="1221" height="723" key="MergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1608876522234" />
+    <state x="356" y="230" key="MultipleFileMergeDialog" timestamp="1608876522265">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="356" y="230" key="MultipleFileMergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1608876522265" />
     <state x="457" y="189" key="RollbackChangesDialog" timestamp="1604995566925">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -137,17 +161,17 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1607923086527" />
-    <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1604458384825">
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1608876417603">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="362" y="211" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604458384825" />
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1608876417603" />
     <state x="350" y="244" width="706" height="486" key="find.popup" timestamp="1604455639252">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="350" y="244" width="706" height="486" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1604455639252" />
-    <state x="733" y="260" key="git4idea.merge.GitPullDialog" timestamp="1604995578184">
+    <state x="733" y="260" key="git4idea.merge.GitPullDialog" timestamp="1608876435540">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="733" y="260" key="git4idea.merge.GitPullDialog/0.23.1440.877@0.23.1440.877" timestamp="1604995578184" />
+    <state x="733" y="260" key="git4idea.merge.GitPullDialog/0.23.1440.877@0.23.1440.877" timestamp="1608876435540" />
   </component>
 </project>

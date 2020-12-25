@@ -36,15 +36,6 @@ class RtcSurfaceView extends StatefulWidget {
   /// The video mirror mode.
   final VideoMirrorMode mirrorMode;
 
-  /// Control whether the surface view's surface is placed on top of its window.
-  ///
-  /// See [TargetPlatform.android].
-  final bool zOrderOnTop;
-
-  /// Control whether the surface view's surface is placed on top of another regular surface view in the window (but still behind the window itself).
-  ///
-  /// See [TargetPlatform.android].
-  final bool zOrderMediaOverlay;
 
   /// Callback signature for when a platform view was created.
   ///
@@ -69,8 +60,6 @@ class RtcSurfaceView extends StatefulWidget {
     this.channelId,
     this.renderMode = VideoRenderMode.Hidden,
     this.mirrorMode = VideoMirrorMode.Auto,
-    this.zOrderOnTop = false,
-    this.zOrderMediaOverlay = false,
     this.onPlatformViewCreated,
     this.gestureRecognizers,
   }) : super(key: key ?? Key('surface-${channelId}-${uid}'));
@@ -99,8 +88,6 @@ class _RtcSurfaceViewState extends State<RtcSurfaceView> {
             'data': {'uid': widget.uid, 'channelId': widget.channelId},
             'renderMode': _renderMode,
             'mirrorMode': _mirrorMode,
-            'zOrderOnTop': widget.zOrderOnTop,
-            'zOrderMediaOverlay': widget.zOrderMediaOverlay,
           },
           creationParamsCodec: const StandardMessageCodec(),
           gestureRecognizers: widget.gestureRecognizers,
@@ -146,14 +133,6 @@ class _RtcSurfaceViewState extends State<RtcSurfaceView> {
     if (oldWidget.mirrorMode != widget.mirrorMode) {
       setMirrorMode();
     }
-    if (defaultTargetPlatform == TargetPlatform.android) {
-      if (oldWidget.zOrderOnTop != widget.zOrderOnTop) {
-        setZOrderOnTop();
-      }
-      if (oldWidget.zOrderMediaOverlay != widget.zOrderMediaOverlay) {
-        setZOrderMediaOverlay();
-      }
-    }
   }
 
   @override
@@ -181,17 +160,6 @@ class _RtcSurfaceViewState extends State<RtcSurfaceView> {
     _channels[_id]?.invokeMethod('setMirrorMode', {'mirrorMode': _mirrorMode});
   }
 
-  void setZOrderOnTop() {
-    if (widget.zOrderOnTop == null) return;
-    _channels[_id]
-        ?.invokeMethod('setZOrderOnTop', {'onTop': widget.zOrderOnTop});
-  }
-
-  void setZOrderMediaOverlay() {
-    if (widget.zOrderMediaOverlay == null) return;
-    _channels[_id]?.invokeMethod(
-        'setZOrderMediaOverlay', {'isMediaOverlay': widget.zOrderMediaOverlay});
-  }
 
   Future<void> onPlatformViewCreated(int id) async {
     _id = id;

@@ -58,7 +58,7 @@ class ArRtcEnginePlugin : FlutterPlugin, MethodCallHandler, EventChannel.StreamH
         eventChannel = EventChannel(binaryMessenger, "ar_rtc_engine/events")
         eventChannel.setStreamHandler(this)
 
-        platformViewRegistry.registerViewFactory("ArTextureView", ArTextureViewFactory(binaryMessenger, this, rtcChannelPlugin))
+        platformViewRegistry.registerViewFactory("ArSurfaceView", ArTextureViewFactory(binaryMessenger, this, rtcChannelPlugin))
     }
 
     override fun onAttachedToEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
