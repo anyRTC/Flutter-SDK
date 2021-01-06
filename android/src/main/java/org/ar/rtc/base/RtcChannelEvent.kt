@@ -101,11 +101,11 @@ class RtcChannelEventHandler(
         }
     }
 
-    override fun onChannelWarning(rtcChannel: RtcChannel?, @Annotations.AgoraWarningCode warn: Int) {
+    override fun onChannelWarning(rtcChannel: RtcChannel?, @Annotations.ArWarningCode warn: Int) {
         callback(RtcChannelEvents.Warning, rtcChannel, warn)
     }
 
-    override fun onChannelError(rtcChannel: RtcChannel?, @Annotations.AgoraErrorCode err: Int) {
+    override fun onChannelError(rtcChannel: RtcChannel?, @Annotations.ArErrorCode err: Int) {
         callback(RtcChannelEvents.Error, rtcChannel, err)
     }
 
@@ -121,7 +121,7 @@ class RtcChannelEventHandler(
         callback(RtcChannelEvents.LeaveChannel, rtcChannel, stats?.toMap())
     }
 
-    override fun onClientRoleChanged(rtcChannel: RtcChannel?, @Annotations.AgoraClientRole oldRole: Int, @Annotations.AgoraClientRole newRole: Int) {
+    override fun onClientRoleChanged(rtcChannel: RtcChannel?, @Annotations.ArClientRole oldRole: Int, @Annotations.ArClientRole newRole: Int) {
         callback(RtcChannelEvents.ClientRoleChanged, rtcChannel, oldRole, newRole)
     }
 
@@ -129,11 +129,11 @@ class RtcChannelEventHandler(
         callback(RtcChannelEvents.UserJoined, rtcChannel, uid, elapsed)
     }
 
-    override fun onUserOffline(rtcChannel: RtcChannel?, uid: String, @Annotations.AgoraUserOfflineReason reason: Int) {
+    override fun onUserOffline(rtcChannel: RtcChannel?, uid: String, @Annotations.ArUserOfflineReason reason: Int) {
         callback(RtcChannelEvents.UserOffline, rtcChannel, uid, reason)
     }
 
-    override fun onConnectionStateChanged(rtcChannel: RtcChannel?, @Annotations.AgoraConnectionStateType state: Int, @Annotations.AgoraConnectionChangedReason reason: Int) {
+    override fun onConnectionStateChanged(rtcChannel: RtcChannel?, @Annotations.ArConnectionStateType state: Int, @Annotations.ArConnectionChangedReason reason: Int) {
         callback(RtcChannelEvents.ConnectionStateChanged, rtcChannel, state, reason)
     }
 
@@ -157,11 +157,11 @@ class RtcChannelEventHandler(
         callback(RtcChannelEvents.VideoSizeChanged, rtcChannel, uid, width, height, rotation)
     }
 
-    override fun onRemoteVideoStateChanged(rtcChannel: RtcChannel?, uid: String, @Annotations.AgoraVideoRemoteState state: Int, @Annotations.AgoraVideoRemoteStateReason reason: Int, elapsed: Int) {
+    override fun onRemoteVideoStateChanged(rtcChannel: RtcChannel?, uid: String, @Annotations.ArVideoRemoteState state: Int, @Annotations.ArVideoRemoteStateReason reason: Int, elapsed: Int) {
         callback(RtcChannelEvents.RemoteVideoStateChanged, rtcChannel, uid, state, reason, elapsed)
     }
 
-    override fun onRemoteAudioStateChanged(rtcChannel: RtcChannel?, uid: String, @Annotations.AgoraAudioRemoteState state: Int, @Annotations.AgoraAudioRemoteStateReason reason: Int, elapsed: Int) {
+    override fun onRemoteAudioStateChanged(rtcChannel: RtcChannel?, uid: String, @Annotations.ArAudioRemoteState state: Int, @Annotations.ArAudioRemoteStateReason reason: Int, elapsed: Int) {
         callback(RtcChannelEvents.RemoteAudioStateChanged, rtcChannel, uid, state, reason, elapsed)
     }
 
@@ -170,7 +170,7 @@ class RtcChannelEventHandler(
         callback(RtcChannelEvents.RtcStats, rtcChannel, stats?.toMap())
     }
 
-    override fun onNetworkQuality(rtcChannel: RtcChannel?, uid: String, @Annotations.AgoraNetworkQuality txQuality: Int, @Annotations.AgoraNetworkQuality rxQuality: Int) {
+    override fun onNetworkQuality(rtcChannel: RtcChannel?, uid: String, @Annotations.ArNetworkQuality txQuality: Int, @Annotations.ArNetworkQuality rxQuality: Int) {
         callback(RtcChannelEvents.NetworkQuality, rtcChannel, uid, txQuality, rxQuality)
     }
 

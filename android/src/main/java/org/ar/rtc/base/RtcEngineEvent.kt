@@ -179,15 +179,15 @@ class RtcEngineEventHandler(
         emitter(methodName, hashMapOf("data" to data.toList()))
     }
 
-    override fun onWarning(@Annotations.AgoraWarningCode warn: Int) {
+    override fun onWarning(@Annotations.ArWarningCode warn: Int) {
         callback(RtcEngineEvents.Warning, warn)
     }
 
-    override fun onError(@Annotations.AgoraErrorCode err: Int) {
+    override fun onError(@Annotations.ArErrorCode err: Int) {
         callback(RtcEngineEvents.Error, err)
     }
 
-    override fun onApiCallExecuted(@Annotations.AgoraErrorCode error: Int, api: String?, result: String?) {
+    override fun onApiCallExecuted(@Annotations.ArErrorCode error: Int, api: String?, result: String?) {
         callback(RtcEngineEvents.ApiCallExecuted, error, api, result)
     }
 
@@ -205,7 +205,7 @@ class RtcEngineEventHandler(
 
 
 
-    override fun onClientRoleChanged(@Annotations.AgoraClientRole oldRole: Int, @Annotations.AgoraClientRole newRole: Int) {
+    override fun onClientRoleChanged(@Annotations.ArClientRole oldRole: Int, @Annotations.ArClientRole newRole: Int) {
         callback(RtcEngineEvents.ClientRoleChanged, oldRole, newRole)
     }
 
@@ -213,15 +213,15 @@ class RtcEngineEventHandler(
         callback(RtcEngineEvents.UserJoined, uid, elapsed)
     }
 
-    override fun onUserOffline(uid: String, @Annotations.AgoraUserOfflineReason reason: Int) {
+    override fun onUserOffline(uid: String, @Annotations.ArUserOfflineReason reason: Int) {
         callback(RtcEngineEvents.UserOffline, uid, reason)
     }
 
-    override fun onConnectionStateChanged(@Annotations.AgoraConnectionStateType state: Int, @Annotations.AgoraConnectionChangedReason reason: Int) {
+    override fun onConnectionStateChanged(@Annotations.ArConnectionStateType state: Int, @Annotations.ArConnectionChangedReason reason: Int) {
         callback(RtcEngineEvents.ConnectionStateChanged, state, reason)
     }
 
-    override fun onNetworkTypeChanged(@Annotations.AgoraNetworkType type: Int) {
+    override fun onNetworkTypeChanged(@Annotations.ArNetworkType type: Int) {
         callback(RtcEngineEvents.NetworkTypeChanged, type)
     }
 
@@ -262,19 +262,19 @@ class RtcEngineEventHandler(
         callback(RtcEngineEvents.VideoSizeChanged, uid, width, height, rotation)
     }
 
-    override fun onRemoteVideoStateChanged(uid: String, @Annotations.AgoraVideoRemoteState state: Int, @Annotations.AgoraVideoRemoteStateReason reason: Int, elapsed: Int) {
+    override fun onRemoteVideoStateChanged(uid: String, @Annotations.ArVideoRemoteState state: Int, @Annotations.ArVideoRemoteStateReason reason: Int, elapsed: Int) {
         callback(RtcEngineEvents.RemoteVideoStateChanged, uid, state, reason, elapsed)
     }
 
-    override fun onLocalVideoStateChanged(@Annotations.AgoraLocalVideoStreamState localVideoState: Int, @Annotations.AgoraLocalVideoStreamError error: Int) {
+    override fun onLocalVideoStateChanged(@Annotations.ArLocalVideoStreamState localVideoState: Int, @Annotations.ArLocalVideoStreamError error: Int) {
         callback(RtcEngineEvents.LocalVideoStateChanged, localVideoState, error)
     }
 
-    override fun onRemoteAudioStateChanged(uid: String, @Annotations.AgoraAudioRemoteState state: Int, @Annotations.AgoraAudioRemoteStateReason reason: Int, elapsed: Int) {
+    override fun onRemoteAudioStateChanged(uid: String, @Annotations.ArAudioRemoteState state: Int, @Annotations.ArAudioRemoteStateReason reason: Int, elapsed: Int) {
         callback(RtcEngineEvents.RemoteAudioStateChanged, uid, state, reason, elapsed)
     }
 
-    override fun onLocalAudioStateChanged(@Annotations.AgoraAudioLocalState state: Int, @Annotations.AgoraAudioLocalError error: Int) {
+    override fun onLocalAudioStateChanged(@Annotations.ArAudioLocalState state: Int, @Annotations.ArAudioLocalError error: Int) {
         callback(RtcEngineEvents.LocalAudioStateChanged, state, error)
     }
 
@@ -286,7 +286,7 @@ class RtcEngineEventHandler(
         callback(RtcEngineEvents.RemoteSubscribeFallbackToAudioOnly, uid, isFallbackOrRecover)
     }
 
-    override fun onAudioRouteChanged(@Annotations.AgoraAudioOutputRouting routing: Int) {
+    override fun onAudioRouteChanged(@Annotations.ArAudioOutputRouting routing: Int) {
         callback(RtcEngineEvents.AudioRouteChanged, routing)
     }
 
@@ -306,11 +306,11 @@ class RtcEngineEventHandler(
         callback(RtcEngineEvents.RtcStats, stats?.toMap())
     }
 
-    override fun onLastmileQuality(@Annotations.AgoraNetworkQuality quality: Int) {
+    override fun onLastmileQuality(@Annotations.ArNetworkQuality quality: Int) {
         callback(RtcEngineEvents.LastmileQuality, quality)
     }
 
-    override fun onNetworkQuality(uid: String, @Annotations.AgoraNetworkQuality txQuality: Int, @Annotations.AgoraNetworkQuality rxQuality: Int) {
+    override fun onNetworkQuality(uid: String, @Annotations.ArNetworkQuality txQuality: Int, @Annotations.ArNetworkQuality rxQuality: Int) {
         callback(RtcEngineEvents.NetworkQuality, uid, txQuality, rxQuality)
     }
 
@@ -349,7 +349,7 @@ class RtcEngineEventHandler(
         callback(RtcEngineEvents.AudioMixingFinished)
     }
 
-    override fun onAudioMixingStateChanged(@Annotations.AgoraAudioMixingStateCode state: Int, @Annotations.AgoraAudioMixingErrorCode errorCode: Int) {
+    override fun onAudioMixingStateChanged(@Annotations.ArAudioMixingStateCode state: Int, @Annotations.ArAudioMixingErrorCode errorCode: Int) {
         callback(RtcEngineEvents.AudioMixingStateChanged, state, errorCode)
     }
 
@@ -357,7 +357,7 @@ class RtcEngineEventHandler(
         callback(RtcEngineEvents.AudioEffectFinished, soundId)
     }
 
-    override fun onRtmpStreamingStateChanged(url: String?, @Annotations.AgoraRtmpStreamingState state: Int, @Annotations.AgoraRtmpStreamingErrorCode errCode: Int) {
+    override fun onRtmpStreamingStateChanged(url: String?, @Annotations.ArRtmpStreamingState state: Int, @Annotations.ArRtmpStreamingErrorCode errCode: Int) {
         callback(RtcEngineEvents.RtmpStreamingStateChanged, url, state, errCode)
     }
 
@@ -365,7 +365,7 @@ class RtcEngineEventHandler(
         callback(RtcEngineEvents.TranscodingUpdated)
     }
 
-    override fun onStreamInjectedStatus(url: String?, uid: String, @Annotations.AgoraInjectStreamStatus status: Int) {
+    override fun onStreamInjectedStatus(url: String?, uid: String, @Annotations.ArInjectStreamStatus status: Int) {
         callback(RtcEngineEvents.StreamInjectedStatus, url, uid, status)
     }
 
@@ -373,7 +373,7 @@ class RtcEngineEventHandler(
         callback(RtcEngineEvents.StreamMessage, uid, streamId, data?.let { String(it, Charsets.UTF_8) })
     }
 
-    override fun onStreamMessageError(uid: String, streamId: Int, @Annotations.AgoraErrorCode error: Int, missed: Int, cached: Int) {
+    override fun onStreamMessageError(uid: String, streamId: Int, @Annotations.ArErrorCode error: Int, missed: Int, cached: Int) {
         callback(RtcEngineEvents.StreamMessageError, uid, streamId, error, missed, cached)
     }
 
@@ -385,11 +385,11 @@ class RtcEngineEventHandler(
         callback(RtcEngineEvents.MediaEngineStartCallSuccess)
     }
 
-    override fun onChannelMediaRelayStateChanged(@Annotations.AgoraChannelMediaRelayState state: Int, @Annotations.AgoraChannelMediaRelayError code: Int) {
+    override fun onChannelMediaRelayStateChanged(@Annotations.ArChannelMediaRelayState state: Int, @Annotations.ArChannelMediaRelayError code: Int) {
         callback(RtcEngineEvents.ChannelMediaRelayStateChanged, state, code)
     }
 
-    override fun onChannelMediaRelayEvent(@Annotations.AgoraChannelMediaRelayEvent code: Int) {
+    override fun onChannelMediaRelayEvent(@Annotations.ArChannelMediaRelayEvent code: Int) {
         callback(RtcEngineEvents.ChannelMediaRelayEvent, code)
     }
 
@@ -414,7 +414,7 @@ class RtcEngineEventHandler(
     }
 
     @Deprecated("", ReplaceWith("onRtmpStreamingStateChanged"))
-    override fun onStreamPublished(url: String?, @Annotations.AgoraErrorCode error: Int) {
+    override fun onStreamPublished(url: String?, @Annotations.ArErrorCode error: Int) {
         callback(RtcEngineEvents.StreamPublished, url, error)
     }
 
@@ -464,7 +464,7 @@ class RtcEngineEventHandler(
     }
 
     @Deprecated("", ReplaceWith("onRemoteAudioStats"))
-    override fun onAudioQuality(uid: String, @Annotations.AgoraNetworkQuality quality: Int, delay: Short, lost: Short) {
+    override fun onAudioQuality(uid: String, @Annotations.ArNetworkQuality quality: Int, delay: Short, lost: Short) {
         callback(RtcEngineEvents.AudioQuality, uid, quality, delay, lost)
     }
 

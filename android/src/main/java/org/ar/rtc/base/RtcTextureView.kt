@@ -56,12 +56,12 @@ class RtcTextureView(
         }
     }
 
-    fun setRenderMode(engine: RtcEngine, @Annotations.AgoraVideoRenderMode renderMode: Int) {
+    fun setRenderMode(engine: RtcEngine, @Annotations.ArVideoRenderMode renderMode: Int) {
         canvas.renderMode = renderMode
         setupRenderMode(engine)
     }
 
-    fun setMirrorMode(engine: RtcEngine, @Annotations.AgoraVideoMirrorMode mirrorMode: Int) {
+    fun setMirrorMode(engine: RtcEngine, @Annotations.ArVideoMirrorMode mirrorMode: Int) {
         canvas.mirrorMode = mirrorMode
         setupRenderMode(engine)
     }

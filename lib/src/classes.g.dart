@@ -276,7 +276,7 @@ LiveTranscoding _$LiveTranscodingFromJson(Map<String, dynamic> json) {
     backgroundColor: json['backgroundColor'] == null
         ? null
         : Color.fromJson(json['backgroundColor'] as Map<String, dynamic>),
-    userConfigExtraInfo: json['userConfigExtraInfo'] as String,
+    transcodingExtraInfo: json['transcodingExtraInfo'] as String,
   );
 }
 
@@ -307,7 +307,7 @@ Map<String, dynamic> _$LiveTranscodingToJson(LiveTranscoding instance) {
   writeNotNull('videoCodecProfile',
       _$VideoCodecProfileTypeEnumMap[instance.videoCodecProfile]);
   writeNotNull('backgroundColor', instance.backgroundColor?.toJson());
-  writeNotNull('userConfigExtraInfo', instance.userConfigExtraInfo);
+  writeNotNull('transcodingExtraInfo', instance.transcodingExtraInfo);
   val['transcodingUsers'] =
       instance.transcodingUsers?.map((e) => e?.toJson())?.toList();
   return val;

@@ -4,6 +4,7 @@ import android.graphics.Color
 import org.ar.rtc.VideoEncoderConfiguration
 import org.ar.rtc.internal.LastmileProbeConfig
 import org.ar.rtc.live.LiveInjectStreamConfig
+import org.ar.rtc.live.LiveTranscoding
 import org.ar.rtc.models.ChannelMediaOptions
 import org.ar.rtc.video.*
 
@@ -26,8 +27,55 @@ fun mapToVideoEncoderConfiguration(map: Map<*, *>): VideoEncoderConfiguration {
         (map["mirrorMode"] as? Number)?.let { mirrorMode = it.toInt() }
     }
 }
+fun mapToARImage(map: Map<*, *>): LiveTranscoding.RtcImage {
+    return LiveTranscoding.RtcImage().apply {
+        (map["url"] as? String)?.let { url = it }
+        (map["x"] as? Number)?.let { x = it.toInt() }
+        (map["y"] as? Number)?.let { y = it.toInt() }
+        (map["width"] as? Number)?.let { width = it.toInt() }
+        (map["height"] as? Number)?.let { height = it.toInt() }
+    }
+}
 
+fun mapToTranscodingUser(map: Map<*, *>): LiveTranscoding.TranscodingUser {
+    return LiveTranscoding.TranscodingUser().apply {
+        (map["uid"] as? Number)?.let { uid = it.toString() }
+        (map["x"] as? Number)?.let { x = it.toInt() }
+        (map["y"] as? Number)?.let { y = it.toInt() }
+        (map["width"] as? Number)?.let { width = it.toInt() }
+        (map["height"] as? Number)?.let { height = it.toInt() }
+        (map["zOrder"] as? Number)?.let { zOrder = it.toInt() }
+        (map["alpha"] as? Number)?.let { alpha = it.toFloat() }
+        (map["audioChannel"] as? Number)?.let { audioChannel = it.toInt() }
+    }
+}
 
+fun mapToLiveTranscoding(map: Map<*, *>): LiveTranscoding {
+    return LiveTranscoding().apply {
+        (map["width"] as? Number)?.let { width = it.toInt() }
+        (map["height"] as? Number)?.let { height = it.toInt() }
+        (map["videoBitrate"] as? Number)?.let { videoBitrate = it.toInt() }
+        (map["videoFramerate"] as? Number)?.let { videoFramerate = it.toInt() }
+        (map["lowLatency"] as? Boolean)?.let { lowLatency = it }
+        (map["videoGop"] as? Number)?.let { videoGop = it.toInt() }
+        (map["watermark"] as? Map<*, *>)?.let { watermark = mapToARImage(it) }
+        (map["backgroundImage"] as? Map<*, *>)?.let { backgroundImage = mapToARImage(it) }
+        (map["audioSampleRate"] as? Number)?.let { audioSampleRate = intToLiveTranscodingAudioSampleRate(it.toInt()).ordinal }
+        (map["audioBitrate"] as? Number)?.let { audioBitrate = it.toInt() }
+        (map["audioChannels"] as? Number)?.let { audioChannels = it.toInt() }
+        (map["audioCodecProfile"] as? Number)?.let { audioCodecProfile = intToAudioCodecProfile(it.toInt()).ordinal }
+        (map["videoCodecProfile"] as? Number)?.let { videoCodecProfile = intToVideoCodecProfile(it.toInt()).ordinal }
+        (map["backgroundColor"] as? Map<*, *>)?.let { backgroundColor = mapToColor(it) }
+        (map["transcodingExtraInfo"] as? String)?.let { transcodingExtraInfo = it }
+        (map["transcodingUsers"] as? List<*>)?.let { list ->
+            list.forEach { item ->
+                (item as? Map<*, *>)?.let {
+                    addUser(mapToTranscodingUser(it))
+                }
+            }
+        }
+    }
+}
 
 
 fun mapToColor(map: Map<*, *>): Int {

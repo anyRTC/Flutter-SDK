@@ -373,9 +373,8 @@ class LiveTranscoding {
   @JsonKey(includeIfNull: false)
   Color backgroundColor;
 
-  /// Reserved property. Extra user-defined information to send the Supplemental Enhancement Information (SEI) for the H.264/H.265 video stream to the CDN live client. Maximum length: 4096 Bytes.
   @JsonKey(includeIfNull: false)
-  String userConfigExtraInfo;
+  String transcodingExtraInfo;
 
   /// An TranscodingUser object managing the user layout configuration in the CDN live stream. anyrtc supports a maximum of 17 transcoding users in a CDN live stream channel.
   final List<TranscodingUser> transcodingUsers;
@@ -397,7 +396,7 @@ class LiveTranscoding {
     this.audioCodecProfile,
     this.videoCodecProfile,
     this.backgroundColor,
-    this.userConfigExtraInfo,
+    this.transcodingExtraInfo,
   });
 
   /// @nodoc

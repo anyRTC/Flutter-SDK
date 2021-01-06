@@ -569,6 +569,23 @@ class RtcEngine with RtcEngineInterface {
   Future<void> setAudioMixingPitch(int pitch) {
     return _invokeMethod('setAudioMixingPitch', {'pitch': pitch});
   }
+
+  @override
+  Future<void> addPublishStreamUrl(String url, bool transcodingEnabled) {
+    return _invokeMethod('addPublishStreamUrl',
+        {'url': url, 'transcodingEnabled': transcodingEnabled});
+  }
+
+  @override
+  Future<void> removePublishStreamUrl(String url) {
+    return _invokeMethod('removePublishStreamUrl', {'url': url});
+  }
+
+  @override
+  Future<void> setLiveTranscoding(LiveTranscoding transcoding) {
+    return _invokeMethod(
+        'setLiveTranscoding', {'transcoding': transcoding.toJson()});
+  }
 }
 
 mixin RtcEngineInterface
@@ -578,6 +595,7 @@ mixin RtcEngineInterface
         RtcAudioMixingInterface,
         RtcAudioEffectInterface,
         RtcMediaRelayInterface,
+        RtcPublishStreamInterface,
         RtcAudioRouteInterface,
         RtcEarMonitoringInterface,
         RtcDualStreamInterface,
@@ -628,7 +646,7 @@ mixin RtcEngineInterface
   /// - Ensure that the App ID used for creating the token is the same App ID used in the create method for creating an [RtcEngine] object. Otherwise, CDN live streaming may fail.
   ///
   /// **Parameter** [token] token
-  /// **Parameter** [channelName] The unique channel name for the AgoraRTC session in the string format. The string length must be less than 64 bytes. Supported character scopes are:
+  /// **Parameter** [channelName] The unique channel name for the arRTC session in the string format. The string length must be less than 64 bytes. Supported character scopes are:
   /// - All lowercase English letters: a to z.
   /// - All uppercase English letters: A to Z.
   /// - All numeric characters: 0 to 9.
@@ -648,7 +666,7 @@ mixin RtcEngineInterface
   /// - This method applies to the [ClientRole.Audience] role in a [ChannelProfile.LiveBroadcasting] channel only.
   ///
   /// **Parameter** [token] token
-  /// **Parameter** [channelName] Unique channel name for the AgoraRTC session in the string format. The string length must be less than 64 bytes. Supported character scopes are:
+  /// **Parameter** [channelName] Unique channel name for the arRTC session in the string format. The string length must be less than 64 bytes. Supported character scopes are:
   /// - All lowercase English letters: a to z.
   /// - All uppercase English letters: A to Z.
   /// - All numeric characters: 0 to 9.
@@ -699,7 +717,7 @@ mixin RtcEngineInterface
   /// **Note**
   /// - Ensure that you call this method immediately after calling the [RtcEngine.create] method, otherwise the output log may not be complete.
   ///
-  /// **Parameter** [filePath] File path of the log file. The string of the log file is in UTF-8. The default file path is `/storage/emulated/0/Android/data/<package name>="">/files/agorasdk.log`.
+  /// **Parameter** [filePath] File path of the log file. The string of the log file is in UTF-8. The default file path is `/storage/emulated/0/Android/data/<package name>="">/files/arsdk.log`.
   Future<void> setLogFile(String filePath);
 
   /// Sets the output log level of the SDK.
@@ -711,9 +729,9 @@ mixin RtcEngineInterface
 
   /// Sets the log file size (KB).
   ///
-  /// By default, the SDK outputs five log files, `agorasdk.log`, `agorasdk_1.log`, `agorasdk_2.log`, `agorasdk_3.log`, `agorasdk_4.log`, each with a default size of 1024 KB.
+  /// By default, the SDK outputs five log files, `arsdk.log`, `arsdk_1.log`, `arsdk_2.log`, `arsdk_3.log`, `arsdk_4.log`, each with a default size of 1024 KB.
   ///
-  /// These log files are encoded in UTF-8. The SDK writes the latest logs in `agorasdk.log`. When agorasdk.log is full, the SDK deletes the log file with the earliest modification time among the other four, renames agorasdk.log to the name of the deleted log file, and create a new `agorasdk.log` to record latest logs.
+  /// These log files are encoded in UTF-8. The SDK writes the latest logs in `arsdk.log`. When arsdk.log is full, the SDK deletes the log file with the earliest modification time among the other four, renames arsdk.log to the name of the deleted log file, and create a new `arsdk.log` to record latest logs.
   ///
   /// **Parameter** [fileSizeInKBytes] The size (KB) of a log file. The default value is 1024 KB. If you set `fileSizeInKBytes` to 1024 KB, the SDK outputs at most 5 MB log files; if you set it to less than 1024 KB, the maximum size of a log file is still 1024 KB.
   Future<void> setLogFileSize(int fileSizeInKBytes);
@@ -1384,6 +1402,52 @@ mixin RtcInjectStreamInterface {
   ///
   /// **Parameter** [url] HTTP/HTTPS URL address of the added stream to be removed.
   Future<void> removeInjectStreamUrl(String url);
+}
+mixin RtcPublishStreamInterface {
+  /// Sets the video layout and audio settings for CDN live.
+  ///
+  /// The SDK triggers the [RtcEngineEventHandler.transcodingUpdated] callback when you call this method to update the [LiveTranscoding] class. If you call this method to set the [LiveTranscoding] class for the first time, the SDK does not trigger the [RtcEngineEventHandler.transcodingUpdated] callback.
+  ///
+  /// **Note**
+  /// - Before calling the methods listed in this section:
+  ///   - This method applies to [ChannelProfile.LiveBroadcasting] only.
+  ///   - Ensure that you enable the RTMP Converter service before using this function. See Prerequisites in *Push Streams to CDN*.
+  ///   - Ensure that you call the [RtcEngine.setClientRole] method and set the user role as the host.
+  ///   - Ensure that you call the `setLiveTranscoding` method before calling the [RtcEngine.addPublishStreamUrl] method.
+  ///
+  /// **Parameter** [transcoding] Sets the CDN live audio/video transcoding settings. See [LiveTranscoding].
+  Future<void> setLiveTranscoding(LiveTranscoding transcoding);
+
+  /// Publishes the local stream to the CDN.
+  ///
+  /// The addPublishStreamUrl method call triggers the [RtcEngineEventHandler.rtmpStreamingStateChanged] callback on the local client to report the state of adding a local stream to the CDN.
+  ///
+  /// **Note**
+  /// - Ensure that you enable the RTMP Converter service before using this function. See Prerequisites in *Push Streams to CDN*.
+  /// - This method applies to LiveBroadcasting only.
+  /// - Ensure that the user joins a channel before calling this method.
+  /// - This method adds only one stream HTTP/HTTPS URL address each time it is called.
+  ///
+  /// **Parameter** [url] The CDN streaming URL in the RTMP format. The maximum length of this parameter is 1024 bytes. The URL address must not contain special characters, such as Chinese language characters.
+  ///
+  /// **Parameter** [transcodingEnabled] Sets whether transcoding is enabled/disabled. If you set this parameter as true, ensure that you call the setLiveTranscoding method before this method.
+  /// See [RtcEngine.setLiveTranscoding]
+  /// - `true`: Enable transcoding. To transcode the audio or video streams when publishing them to CDN live, often used for combining the audio and video streams of multiple hosts in CDN live.
+  /// - `false`: Disable transcoding.
+  Future<void> addPublishStreamUrl(String url, bool transcodingEnabled);
+
+  /// Removes an RTMP stream from the CDN.
+  ///
+  /// This method removes the RTMP URL address (added by [RtcEngine.addPublishStreamUrl]) from a CDN live stream. The SDK reports the result of this method call in the [RtcEngineEventHandler.rtmpStreamingStateChanged] callback.
+  ///
+  /// **Note**
+  /// - Ensure that you enable the RTMP Converter service before using this function. See Prerequisites in *Push Streams to CDN*.
+  /// - Ensure that the user joins a channel before calling this method.
+  /// - This method applies to LiveBroadcasting only.
+  /// - This method removes only one stream RTMP URL address each time it is called.
+  ///
+  /// **Parameter** [url] The RTMP URL address to be removed. The maximum length of this parameter is 1024 bytes. The URL address must not contain special characters, such as Chinese language characters.
+  Future<void> removePublishStreamUrl(String url);
 }
 
 mixin RtcCameraInterface {

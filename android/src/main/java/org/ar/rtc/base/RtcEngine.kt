@@ -151,6 +151,11 @@ class IRtcEngine {
     }
 
     interface RtcPublishStreamInterface {
+        fun setLiveTranscoding(params: Map<String, *>, callback: Callback)
+
+        fun addPublishStreamUrl(params: Map<String, *>, callback: Callback)
+
+        fun removePublishStreamUrl(params: Map<String, *>, callback: Callback)
     }
 
     interface RtcMediaRelayInterface {
@@ -677,6 +682,18 @@ class RtcEngineManager(
 
     override fun setCameraAutoFocusFaceModeEnabled(params: Map<String, *>, callback: Callback) {
         callback.code(engine?.setCameraAutoFocusFaceModeEnabled(params["enabled"] as Boolean))
+    }
+
+    override fun setLiveTranscoding(params: Map<String, *>, callback: Callback) {
+        callback.code(engine?.setLiveTranscoding(mapToLiveTranscoding(params["transcoding"] as Map<*, *>)))
+    }
+
+    override fun addPublishStreamUrl(params: Map<String, *>, callback: Callback) {
+        callback.code(engine?.addPublishStreamUrl(params["url"] as String, params["transcodingEnabled"] as Boolean))
+    }
+
+    override fun removePublishStreamUrl(params: Map<String, *>, callback: Callback) {
+        callback.code(engine?.removePublishStreamUrl(params["url"] as String))
     }
 
 }
