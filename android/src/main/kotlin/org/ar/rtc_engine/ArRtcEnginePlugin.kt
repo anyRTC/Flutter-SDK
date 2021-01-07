@@ -31,6 +31,8 @@ class ArRtcEnginePlugin : FlutterPlugin, MethodCallHandler, EventChannel.StreamH
     private val manager = RtcEngineManager { methodName, data -> emit(methodName, data) }
     private val handler = Handler(Looper.getMainLooper())
     private val rtcChannelPlugin = ArRtcChannelPlugin(this)
+    private val rtcStreamKitPlugin = ArRtcStreamKitPlugin(this)
+    private val rtcMediaPlayerPlugin = ArRtcMediaPlayerPlugin()
 
     // This static function is optional and equivalent to onAttachedToEngine. It supports the old
     // pre-Flutter-1.12 Android projects. You are encouraged to continue supporting
@@ -47,6 +49,8 @@ class ArRtcEnginePlugin : FlutterPlugin, MethodCallHandler, EventChannel.StreamH
             ArRtcEnginePlugin().apply {
                 initPlugin(registrar.context(), registrar.messenger(), registrar.platformViewRegistry())
                 rtcChannelPlugin.initPlugin(registrar.messenger())
+                rtcStreamKitPlugin.initPlugin(registrar.messenger())
+                rtcMediaPlayerPlugin.initPlugin(registrar.messenger())
             }
         }
     }
@@ -63,11 +67,15 @@ class ArRtcEnginePlugin : FlutterPlugin, MethodCallHandler, EventChannel.StreamH
 
     override fun onAttachedToEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
         rtcChannelPlugin.onAttachedToEngine(binding)
+        rtcStreamKitPlugin.onAttachedToEngine(binding)
+        rtcMediaPlayerPlugin.onAttachedToEngine(binding)
         initPlugin(binding.applicationContext, binding.binaryMessenger, binding.platformViewRegistry)
     }
 
     override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
         rtcChannelPlugin.onDetachedFromEngine(binding)
+        rtcStreamKitPlugin.onDetachedFromEngine(binding)
+        rtcMediaPlayerPlugin.onDetachedFromEngine(binding)
         methodChannel.setMethodCallHandler(null)
         eventChannel.setStreamHandler(null)
         manager.release()

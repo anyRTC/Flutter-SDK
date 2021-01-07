@@ -323,6 +323,18 @@ class ClientRoleConverter extends EnumConverter<ClientRole, int> {
 }
 
 @JsonSerializable()
+class StreamPushModeConverter extends EnumConverter<StreamPushMode, int> {
+  StreamPushModeConverter(StreamPushMode e) : super(e);
+
+  StreamPushModeConverter.fromValue(int value)
+      : super.fromValue(_$StreamPushModeEnumMap, value);
+
+  int value() {
+    return super.toValue(_$StreamPushModeEnumMap);
+  }
+}
+
+@JsonSerializable()
 class ConnectionChangedReasonConverter
     extends EnumConverter<ConnectionChangedReason, int> {
   ConnectionChangedReasonConverter(ConnectionChangedReason e) : super(e);

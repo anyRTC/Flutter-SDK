@@ -576,6 +576,11 @@ const _$ClientRoleEnumMap = {
   ClientRole.Audience: 2,
 };
 
+const _$StreamPushModeEnumMap = {
+  StreamPushMode.AudMix: 0,
+  StreamPushMode.VidMix: 1,
+};
+
 ConnectionChangedReasonConverter _$ConnectionChangedReasonConverterFromJson(
     Map<String, dynamic> json) {
   return ConnectionChangedReasonConverter(

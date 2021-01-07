@@ -34,6 +34,14 @@ enum AreaCode {
   GLOB,
 }
 
+enum StreamPushMode{
+  @JsonValue(0)
+  AudMix,
+
+  @JsonValue(1)
+  VidMix,
+}
+
 /// Self-defined audio codec profile.
 enum AudioCodecProfileType {
   /// (Default) LCAAC, which is the low-complexity audio codec profile.

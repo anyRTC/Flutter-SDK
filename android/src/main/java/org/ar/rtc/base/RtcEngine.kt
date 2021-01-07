@@ -263,6 +263,10 @@ class IRtcEngine {
 
     interface RtcStreamMessageInterface {
     }
+
+    interface RtcStreamingKitInterface{
+
+    }
 }
 
 class RtcEngineManager(

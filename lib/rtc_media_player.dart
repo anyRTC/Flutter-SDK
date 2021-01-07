@@ -1,0 +1,1 @@
+export 'src/rtc_media_player.dart' show RtcMediaPlayer;
