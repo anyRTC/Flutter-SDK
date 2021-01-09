@@ -72,6 +72,35 @@ func mapToVideoEncoderConfiguration(_ map: Dictionary<String, Any>) -> ARVideoEn
     return config
 }
 
+func mapToARImage(_ map: Dictionary<String, Any>) -> ARImage {
+    let image = ARImage()
+    if let url = map["url"] as? String {
+        if let url = URL(string: url) {
+            image.url = url
+        }
+    }
+    image.rect = mapToRect(map)
+    return image
+}
+
+func mapToTranscodingUser(_ map: Dictionary<String, Any>) -> ARLiveTranscodingUser {
+    let user = ARLiveTranscodingUser()
+    if let uid = map["uid"] as? String {
+        user.uid = uid
+    }
+    user.rect = mapToRect(map)
+    if let zOrder = map["zOrder"] as? Int {
+        user.zOrder = zOrder
+    }
+    if let alpha = map["alpha"] as? Double {
+        user.alpha = alpha
+    }
+    if let audioChannel = map["audioChannel"] as? Int {
+        user.audioChannel = audioChannel
+    }
+    return user
+}
+
 func mapToColor(_ map: Dictionary<String, Any>) -> UIColor {
     return UIColor(
             red: CGFloat(map["red"] as! Int),
@@ -79,6 +108,61 @@ func mapToColor(_ map: Dictionary<String, Any>) -> UIColor {
             blue: CGFloat(map["blue"] as! Int),
             alpha: 1.0
     )
+}
+
+func mapToLiveTranscoding(_ map: Dictionary<String, Any>) -> ARLiveTranscoding {
+    let transcoding = ARLiveTranscoding.default()
+    transcoding.size = mapToSize(map)
+    if let videoBitrate = map["videoBitrate"] as? Int {
+        transcoding.videoBitrate = videoBitrate
+    }
+    if let videoFramerate = map["videoFramerate"] as? Int {
+        transcoding.videoFramerate = videoFramerate
+    }
+    if let videoGop = map["videoGop"] as? Int {
+        transcoding.videoGop = videoGop
+    }
+    if let watermark = map["watermark"] as? Dictionary<String, Any> {
+        transcoding.watermark = mapToARImage(watermark)
+    }
+    if let backgroundImage = map["backgroundImage"] as? Dictionary<String, Any> {
+        transcoding.backgroundImage = mapToARImage(backgroundImage)
+    }
+    if let audioSampleRate = map["audioSampleRate"] as? Int {
+        if let audioSampleRate = ARAudioSampleRateType(rawValue: audioSampleRate) {
+            transcoding.audioSampleRate = audioSampleRate
+        }
+    }
+    if let audioBitrate = map["audioBitrate"] as? Int {
+        transcoding.audioBitrate = audioBitrate
+    }
+    if let audioChannels = map["audioChannels"] as? Int {
+        transcoding.audioChannels = audioChannels
+    }
+    if let audioCodecProfile = map["audioCodecProfile"] as? Int {
+        if let audioCodecProfile = ARAudioCodecProfileType(rawValue: audioCodecProfile) {
+            transcoding.audioCodecProfile = audioCodecProfile
+        }
+    }
+    if let videoCodecProfile = map["videoCodecProfile"] as? Int {
+        if let videoCodecProfile = ARVideoCodecProfileType(rawValue: videoCodecProfile) {
+            transcoding.videoCodecProfile = videoCodecProfile
+        }
+    }
+    if let backgroundColor = map["backgroundColor"] as? Dictionary<String, Any> {
+        transcoding.backgroundColor = mapToColor(backgroundColor)
+    }
+    if let userConfigExtraInfo = map["userConfigExtraInfo"] as? String {
+        transcoding.transcodingExtraInfo = userConfigExtraInfo
+    }
+    if let transcodingUsers = map["transcodingUsers"] as? Array<Any> {
+        transcodingUsers.forEach { (item) in
+            if let item = item as? Dictionary<String, Any> {
+                transcoding.add(mapToTranscodingUser(item))
+            }
+        }
+    }
+    return transcoding
 }
 
 func mapToChannelMediaInfo(_ map: Dictionary<String, Any>) -> ARChannelMediaRelayInfo {
@@ -107,6 +191,23 @@ func mapToChannelMediaRelayConfiguration(_ map: Dictionary<String, Any>) -> ARCh
                 config.setDestinationInfo(info, forChannelName: info.channelName ?? "")
             }
         }
+    }
+    return config
+}
+
+func mapToLastmileProbeConfig(_ map: Dictionary<String, Any>) -> ARLastmileProbeConfig {
+    let config = ARLastmileProbeConfig()
+    if let probeUplink = map["probeUplink"] as? Bool {
+        config.probeUplink = probeUplink
+    }
+    if let probeDownlink = map["probeDownlink"] as? Bool {
+        config.probeDownlink = probeDownlink
+    }
+    if let expectedUplinkBitrate = map["expectedUplinkBitrate"] as? Int {
+        config.expectedUplinkBitrate = UInt(expectedUplinkBitrate)
+    }
+    if let expectedDownlinkBitrate = map["expectedDownlinkBitrate"] as? Int {
+        config.expectedDownlinkBitrate = UInt(expectedDownlinkBitrate)
     }
     return config
 }
@@ -153,4 +254,17 @@ func mapToChannelMediaOptions(_ map: Dictionary<String, Any>) -> ARtcChannelMedi
         options.autoSubscribeVideo = autoSubscribeVideo
     }
     return options
+}
+
+func mapToEncryptionConfig(_ map: Dictionary<String, Any>) -> AREncryptionConfig {
+    let encryptionConfig = AREncryptionConfig()
+    if let encryptionMode = map["encryptionMode"] as? Int {
+        if let encryptionMode = AREncryptionMode(rawValue: encryptionMode) {
+            encryptionConfig.encryptionMode = encryptionMode
+        }
+    }
+    if let encryptionKey = map["encryptionKey"] as? String {
+        encryptionConfig.encryptionKey = encryptionKey
+    }
+    return encryptionConfig
 }

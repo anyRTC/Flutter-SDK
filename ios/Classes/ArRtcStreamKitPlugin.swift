@@ -1,51 +1,39 @@
-import Flutter
-import UIKit
+//
+//  ArRtcStreamKitPlugin.swift
+//  ar_rtc_engine
+//
+//  Created by 余生丶 on 2021/1/7.
+//
+
+import Foundation
 import ARtcKit
 
-public class SwiftArRtcEnginePlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
+public class ArRtcStreamKitPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
+    private final weak var rtcEnginePlugin: SwiftArRtcEnginePlugin?
     private var methodChannel: FlutterMethodChannel?
     private var eventChannel: FlutterEventChannel?
     private var eventSink: FlutterEventSink? = nil
-    private lazy var manager: RtcEngineManager = {
-        return RtcEngineManager() { [weak self] methodName, data in
+    private lazy var manager: StreamingKitManager = {
+        return StreamingKitManager() { [weak self] methodName, data in
             self?.emit(methodName, data)
         }
     }()
-    private lazy var rtcChannelPlugin: ArRtcChannelPlugin = {
-        return ArRtcChannelPlugin(self)
-    }()
     
-    private lazy var rtcStreamKitPlugin: ArRtcStreamKitPlugin = {
-        return ArRtcStreamKitPlugin(self)
-    }()
-    
-    private lazy var rtcMediaPlayerPlugin: ArRtcMediaPlayerPlugin = {
-        return ArRtcMediaPlayerPlugin(self)
-    }()
-
-    public static func register(with registrar: FlutterPluginRegistrar) {
-        let rtcEnginePlugin = SwiftArRtcEnginePlugin()
-        rtcEnginePlugin.rtcChannelPlugin.initPlugin(registrar)
-        rtcEnginePlugin.rtcStreamKitPlugin.initPlugin(registrar)
-        rtcEnginePlugin.rtcMediaPlayerPlugin.initPlugin(registrar)
-        rtcEnginePlugin.initPlugin(registrar)
+    init(_ rtcEnginePlugin: SwiftArRtcEnginePlugin) {
+        self.rtcEnginePlugin = rtcEnginePlugin
     }
 
-    private func initPlugin(_ registrar: FlutterPluginRegistrar) {
-        methodChannel = FlutterMethodChannel(name: "ar_rtc_engine", binaryMessenger: registrar.messenger())
-        eventChannel = FlutterEventChannel(name: "ar_rtc_engine/events", binaryMessenger: registrar.messenger())
+    public static func register(with registrar: FlutterPluginRegistrar) {
+
+    }
+
+    public func initPlugin(_ registrar: FlutterPluginRegistrar) {
+        methodChannel = FlutterMethodChannel(name: "ar_rtc_stream_kit", binaryMessenger: registrar.messenger())
         registrar.addMethodCallDelegate(self, channel: methodChannel!)
         eventChannel?.setStreamHandler(self)
-
-        registrar.register(ArSurfaceViewFactory(registrar.messenger(), self, rtcChannelPlugin), withId: "ArSurfaceView")
-        registrar.register(ArMediaPlayerViewFactory(registrar.messenger(), rtcMediaPlayerPlugin), withId: "ArMediaPlayerView")
     }
 
     public func detachFromEngine(for registrar: FlutterPluginRegistrar) {
-        rtcChannelPlugin.detachFromEngine(for: registrar)
-        rtcStreamKitPlugin.detachFromEngine(for: registrar)
-        rtcMediaPlayerPlugin.detachFromEngine(for: registrar)
-        
         methodChannel?.setMethodCallHandler(nil)
         eventChannel?.setStreamHandler(nil)
         manager.Release()
@@ -71,14 +59,17 @@ public class SwiftArRtcEnginePlugin: NSObject, FlutterPlugin, FlutterStreamHandl
         eventSink?(event)
     }
 
-    weak var engine: ARtcEngineKit? {
-        return manager.engine
+    private weak var engine: ARtcEngineKit? {
+        return rtcEnginePlugin?.engine
     }
 
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         if let params = call.arguments as? NSDictionary {
             let selector = NSSelectorFromString(call.method + "::")
             if manager.responds(to: selector) {
+                if call.method == "createInstance" {
+                    params.setValue(engine, forKey: "engine")
+                }
                 manager.perform(selector, with: params, with: ResultCallback(result))
                 return
             }
@@ -92,4 +83,3 @@ public class SwiftArRtcEnginePlugin: NSObject, FlutterPlugin, FlutterStreamHandl
         result(FlutterMethodNotImplemented)
     }
 }
-

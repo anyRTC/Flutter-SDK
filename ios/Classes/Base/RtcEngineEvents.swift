@@ -350,6 +350,14 @@ extension RtcEngineEventHandler: ARtcEngineDelegate {
     func rtcEngine(_ engine: ARtcEngineKit, didAudioMuted muted: Bool, byUid uid: String) {
         callback(RtcEngineEvents.UserMuteAudio, uid, muted)
     }
+
+    func rtcEngine(_ engine: ARtcEngineKit, streamPublishedWithUrl url: String, errorCode: ARErrorCode) {
+        callback(RtcEngineEvents.StreamPublished, url, errorCode.rawValue)
+    }
+
+    func rtcEngine(_ engine: ARtcEngineKit, streamUnpublishedWithUrl url: String) {
+        callback(RtcEngineEvents.StreamUnpublished, url)
+    }
     
     func rtcEngine(_ engine: ARtcEngineKit, audioTransportStatsOfUid uid: String, delay: UInt, lost: UInt, rxKBitRate: UInt) {
         callback(RtcEngineEvents.RemoteAudioTransportStats, uid, delay, lost, rxKBitRate)

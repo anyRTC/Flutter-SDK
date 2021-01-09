@@ -13,6 +13,7 @@ protocol RtcEngineInterface:
         RtcEngineVideoInterface,
         RtcEngineAudioMixingInterface,
         RtcEngineAudioEffectInterface,
+        RtcEnginePublishStreamInterface,
         RtcEngineMediaRelayInterface,
         RtcEngineAudioRouteInterface,
         RtcEngineEarMonitoringInterface,
@@ -143,6 +144,14 @@ protocol RtcEngineAudioEffectInterface {
     func resumeEffect(_ params: NSDictionary, _ callback: Callback)
 
     func resumeAllEffects(_ callback: Callback)
+}
+
+protocol RtcEnginePublishStreamInterface {
+    func setLiveTranscoding(_ params: NSDictionary, _ callback: Callback)
+
+    func addPublishStreamUrl(_ params: NSDictionary, _ callback: Callback)
+
+    func removePublishStreamUrl(_ params: NSDictionary, _ callback: Callback)
 }
 
 protocol RtcEngineMediaRelayInterface {
@@ -481,6 +490,18 @@ class RtcEngineManager: NSObject, RtcEngineInterface {
 
     @objc func resumeAllEffects(_ callback: Callback) {
         callback.code(engine?.resumeAllEffects())
+    }
+
+    @objc func setLiveTranscoding(_ params: NSDictionary, _ callback: Callback) {
+        callback.code(engine?.setLiveTranscoding(mapToLiveTranscoding(params["transcoding"] as! Dictionary)))
+    }
+
+    @objc func addPublishStreamUrl(_ params: NSDictionary, _ callback: Callback) {
+        callback.code(engine?.addPublishStreamUrl(params["url"] as! String, transcodingEnabled: params["transcodingEnabled"] as! Bool))
+    }
+
+    @objc func removePublishStreamUrl(_ params: NSDictionary, _ callback: Callback) {
+        callback.code(engine?.removePublishStreamUrl(params["url"] as! String))
     }
 
     @objc func startChannelMediaRelay(_ params: NSDictionary, _ callback: Callback) {

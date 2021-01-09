@@ -1,8 +1,8 @@
 PODS:
   - ar_rtc_engine (4.1.0):
-    - ARtcKit_iOS (= 4.1.0.8)
+    - ARtcKit_iOS (= 4.1.1.4)
     - Flutter
-  - ARtcKit_iOS (4.1.0.8)
+  - ARtcKit_iOS (4.1.1.4)
   - e2e (0.0.1):
     - Flutter
   - Flutter (1.0.0)
@@ -30,8 +30,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/permission_handler/ios"
 
 SPEC CHECKSUMS:
-  ar_rtc_engine: 46916768da27e2dcde1385253399f64bda8a8a39
-  ARtcKit_iOS: 38c9d808c49a0bcf47d55ea3fa29bec1ee3b8ac8
+  ar_rtc_engine: 0c054a3c27e044942924004dd54c693cf1c253a4
+  ARtcKit_iOS: ed176019f40cc0bd4b62ef9791134b6cadd37c41
   e2e: 967b9b1fc533b7636a3b7a719f840c27f301fe1f
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   permission_handler: eac8e15b4a1a3fba55b761d19f3f4e6b005d15b6
