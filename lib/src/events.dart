@@ -90,6 +90,14 @@ typedef StreamSubscribeStateCallback = void Function(
 typedef RtmpStreamingEventCallback = void Function(
     String url, RtmpStreamingEvent eventCode);
 
+typedef PlayerStateChangedCallBack = void Function(
+        MediaPlayerStateEvent event,MediaPlayerErrorEvent errorEvent
+    );
+typedef PositionChangedCallBack= void Function(int position);
+typedef PlayerEventCallBack = void Function(MediaPlayerEvent event);
+typedef MetaData = void Function(MediaPlayerMetadataType type);
+
+
 /// The SDK uses the [RtcEngineEventHandler] class to send callbacks to the application, and the application inherits the methods of this class to retrieve these callbacks.
 ///
 /// All methods in this class have their (empty) default implementations, and the application can inherit only some of the required events instead of all of them.
@@ -1719,6 +1727,7 @@ class RtcChannelEventHandler {
   /// - [RtmpStreamingEvent] `eventCode`: The event code. See [RtmpStreamingEvent].
   RtmpStreamingEventCallback rtmpStreamingEvent;
 
+
   /// Constructs a [RtcChannelEventHandler]
   RtcChannelEventHandler(
       {this.warning,
@@ -1908,6 +1917,41 @@ class RtcChannelEventHandler {
         break;
       case 'RtmpStreamingEvent':
         rtmpStreamingEvent?.call(data[0], data[1]);
+        break;
+    }
+  }
+}
+
+/// The RtcMediaPlayerEvents interface.
+class RtcMediaPlayerEventHandler{
+
+  PlayerStateChangedCallBack playerStateChangedCallBack;
+
+  PositionChangedCallBack positionChangedCallBack;
+
+  PlayerEventCallBack playerEventCallBack;
+
+  MetadataCallback metadataCallback;
+
+  RtcMediaPlayerEventHandler({
+    this.playerStateChangedCallBack,
+    this.positionChangedCallBack,
+    this.playerEventCallBack,
+    this.metadataCallback
+});
+  void process(String methodName, List<dynamic> data) {
+    switch (methodName) {
+      case 'PlayerStateChanged':
+        playerStateChangedCallBack?.call(MediaPlayerStateConverter.fromValue(data[0]).e,MediaPlayerErrorConverter.fromValue(data[1]).e);
+        break;
+      case 'PositionChanged':
+        positionChangedCallBack?.call(data[0]);
+        break;
+      case 'PlayerEvent':
+        playerEventCallBack?.call(PlayerEventConverter.fromValue(data[0]).e);
+        break;
+      case 'MetaData':
+        // playerEventCallBack?.call();
         break;
     }
   }

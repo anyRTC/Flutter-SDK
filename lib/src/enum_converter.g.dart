@@ -1407,3 +1407,36 @@ const _$AudioSessionOperationRestrictionEnumMap = {
   AudioSessionOperationRestriction.DeactivateSession: 4,
   AudioSessionOperationRestriction.All: 128,
 };
+
+const _$MediaPlayerStateEnumMap = {
+  MediaPlayerStateEvent.PLAYER_STATE_IDLE: 0,
+  MediaPlayerStateEvent.PLAYER_STATE_OPENING: 1,
+  MediaPlayerStateEvent.PLAYER_STATE_OPEN_COMPLETED: 2,
+  MediaPlayerStateEvent.PLAYER_STATE_PLAYING: 3,
+  MediaPlayerStateEvent.PLAYER_STATE_PAUSED: 4,
+  MediaPlayerStateEvent.PLAYER_STATE_PLAYBACK_COMPLETED: 5,
+  MediaPlayerStateEvent.PLAYER_STATE_STOPPED: 6,
+  MediaPlayerStateEvent.PLAYER_STATE_FAILED: 100,
+};
+
+const _$MediaPlayerErrorEnumMap = {
+  MediaPlayerErrorEvent.PLAYER_ERROR_NONE: 0,
+  MediaPlayerErrorEvent.PLAYER_ERROR_INVALID_ARGUMENTS: -1,
+  MediaPlayerErrorEvent.PLAYER_ERROR_INTERNAL: -2,
+  MediaPlayerErrorEvent.PLAYER_ERROR_NO_RESOURCE: -3,
+  MediaPlayerErrorEvent.PLAYER_ERROR_INVALID_MEDIA_SOURCE: -4,
+  MediaPlayerErrorEvent.PLAYER_ERROR_UNKNOWN_STREAM_TYPE: -5,
+  MediaPlayerErrorEvent.PLAYER_ERROR_OBJ_NOT_INITIALIZED: -6,
+  MediaPlayerErrorEvent.PLAYER_ERROR_CODEC_NOT_SUPPORTED: -7,
+  MediaPlayerErrorEvent.PLAYER_ERROR_VIDEO_RENDER_FAILED: -8,
+  MediaPlayerErrorEvent.PLAYER_ERROR_INVALID_STATE: -9,
+  MediaPlayerErrorEvent.PLAYER_ERROR_URL_NOT_FOUND: -10,
+  MediaPlayerErrorEvent.PLAYER_ERROR_INVALID_CONNECTION_STATE: -11,
+  MediaPlayerErrorEvent.PLAY_ERROR_SRC_BUFFER_UNDERFLOW: -12,
+};
+const _$MediaPlayerEventEnumMap = {
+  MediaPlayerEvent.PLAYER_EVENT_SEEK_BEGIN: 0,
+  MediaPlayerEvent.PLAYER_EVENT_SEEK_COMPLETE: 1,
+  MediaPlayerEvent.PLAYER_EVENT_SEEK_ERROR: 2,
+  MediaPlayerEvent.PLAYER_EVENT_AUDIO_TRACK_CHANGED: 3,
+};

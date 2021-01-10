@@ -63,6 +63,9 @@ class ArRtcEnginePlugin : FlutterPlugin, MethodCallHandler, EventChannel.StreamH
         eventChannel.setStreamHandler(this)
 
         platformViewRegistry.registerViewFactory("ArSurfaceView", ArTextureViewFactory(binaryMessenger, this, rtcChannelPlugin))
+        platformViewRegistry.registerViewFactory("ArMediaPlayerView", ArMediaPlayerViewFactory(rtcMediaPlayerPlugin))
+
+
     }
 
     override fun onAttachedToEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {

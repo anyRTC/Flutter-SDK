@@ -20,7 +20,7 @@ class _RtcMediaPlayerViewState extends State<RtcMediaPlayerView> {
   @override
   Widget build(BuildContext context) {
     if (defaultTargetPlatform == TargetPlatform.android) {
-
+      return AndroidView(viewType: "ArMediaPlayerView");
     } else if (defaultTargetPlatform == TargetPlatform.iOS) {
 
       return UiKitView(

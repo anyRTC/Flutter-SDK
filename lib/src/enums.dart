@@ -34,7 +34,7 @@ enum AreaCode {
   GLOB,
 }
 
-enum StreamPushMode{
+enum StreamPushMode {
   @JsonValue(0)
   AudMix,
 
@@ -2020,6 +2020,72 @@ enum RtmpStreamingEvent {
   /// An error occurs when you add a background image or a watermark image to the RTMP stream.
   @JsonValue(1)
   FailedLoadImage,
+}
+
+enum MediaPlayerStateEvent {
+  @JsonValue(0)
+  PLAYER_STATE_IDLE,
+  @JsonValue(1)
+  PLAYER_STATE_OPENING,
+  @JsonValue(2)
+  PLAYER_STATE_OPEN_COMPLETED,
+  @JsonValue(3)
+  PLAYER_STATE_PLAYING,
+  @JsonValue(4)
+  PLAYER_STATE_PAUSED,
+  @JsonValue(5)
+  PLAYER_STATE_PLAYBACK_COMPLETED,
+  @JsonValue(6)
+  PLAYER_STATE_STOPPED,
+  @JsonValue(100)
+  PLAYER_STATE_FAILED,
+}
+
+enum MediaPlayerErrorEvent {
+  @JsonValue(0)
+  PLAYER_ERROR_NONE,
+  @JsonValue(-1)
+  PLAYER_ERROR_INVALID_ARGUMENTS,
+  @JsonValue(-2)
+  PLAYER_ERROR_INTERNAL,
+  @JsonValue(-3)
+  PLAYER_ERROR_NO_RESOURCE,
+  @JsonValue(-4)
+  PLAYER_ERROR_INVALID_MEDIA_SOURCE,
+  @JsonValue(-5)
+  PLAYER_ERROR_UNKNOWN_STREAM_TYPE,
+  @JsonValue(-6)
+  PLAYER_ERROR_OBJ_NOT_INITIALIZED,
+  @JsonValue(-7)
+  PLAYER_ERROR_CODEC_NOT_SUPPORTED,
+  @JsonValue(-8)
+  PLAYER_ERROR_VIDEO_RENDER_FAILED,
+  @JsonValue(-9)
+  PLAYER_ERROR_INVALID_STATE,
+  @JsonValue(-10)
+  PLAYER_ERROR_URL_NOT_FOUND,
+  @JsonValue(-11)
+  PLAYER_ERROR_INVALID_CONNECTION_STATE,
+  @JsonValue(-12)
+  PLAY_ERROR_SRC_BUFFER_UNDERFLOW,
+}
+
+enum MediaPlayerEvent {
+  @JsonValue(0)
+  PLAYER_EVENT_SEEK_BEGIN,
+  @JsonValue(1)
+  PLAYER_EVENT_SEEK_COMPLETE,
+  @JsonValue(2)
+  PLAYER_EVENT_SEEK_ERROR,
+  @JsonValue(3)
+  PLAYER_EVENT_AUDIO_TRACK_CHANGED,
+}
+
+enum MediaPlayerMetadataType {
+  @JsonValue(0)
+  PLAYER_METADATA_TYPE_UNKNOWN,
+  @JsonValue(1)
+  PLAYER_METADATA_TYPE_SEI,
 }
 
 /// Audio session restriction.

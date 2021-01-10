@@ -698,6 +698,8 @@ class WarningCodeConverter extends EnumConverter<WarningCode, int> {
   }
 }
 
+
+
 @JsonSerializable()
 class AudioChannelConverter extends EnumConverter<AudioChannel, int> {
   AudioChannelConverter(AudioChannel e) : super(e);
@@ -772,5 +774,42 @@ class AudioSessionOperationRestrictionConverter
 
   int value() {
     return super.toValue(_$AudioSessionOperationRestrictionEnumMap);
+  }
+}
+
+
+@JsonSerializable()
+class MediaPlayerStateConverter extends EnumConverter<MediaPlayerStateEvent, int> {
+  MediaPlayerStateConverter(MediaPlayerStateEvent e) : super(e);
+
+  MediaPlayerStateConverter.fromValue(int value)
+      : super.fromValue(_$MediaPlayerStateEnumMap, value);
+
+  int value() {
+    return super.toValue(_$MediaPlayerStateEnumMap);
+  }
+}
+
+@JsonSerializable()
+class MediaPlayerErrorConverter extends EnumConverter<MediaPlayerErrorEvent, int> {
+  MediaPlayerErrorConverter(MediaPlayerErrorEvent e) : super(e);
+
+  MediaPlayerErrorConverter.fromValue(int value)
+      : super.fromValue(_$MediaPlayerErrorEnumMap, value);
+
+  int value() {
+    return super.toValue(_$MediaPlayerErrorEnumMap);
+  }
+}
+
+@JsonSerializable()
+class PlayerEventConverter extends EnumConverter<MediaPlayerEvent, int> {
+  PlayerEventConverter(MediaPlayerEvent e) : super(e);
+
+  PlayerEventConverter.fromValue(int value)
+      : super.fromValue(_$MediaPlayerEventEnumMap, value);
+
+  int value() {
+    return super.toValue(_$MediaPlayerEventEnumMap);
   }
 }

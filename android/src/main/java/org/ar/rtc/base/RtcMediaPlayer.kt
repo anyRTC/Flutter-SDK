@@ -26,15 +26,18 @@ class IRtcMediaPlayer{
     }
 }
 
-class RtcMediaPlayerManager:IRtcMediaPlayer.RtcMediaPlayerInterface{
+class RtcMediaPlayerManager(private val emit: (methodName: String, data: Map<String, Any?>?) -> Unit):IRtcMediaPlayer.RtcMediaPlayerInterface{
     var player: ARMediaPlayerKit? =null
+    val event = RtcMediaPlayerEventHandler{methodName, data -> emit(methodName, data)}
 
     override fun createInstance(callback: Callback) {
         player = ARMediaPlayerKit()
+        player?.registerPlayerObserver(event)
         callback.code(0)
     }
 
     override fun destory(callback: Callback) {
+        player?.unRegisterPlayerObserver(event)
         player?.destroy()
         callback.code(0)
     }

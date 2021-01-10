@@ -3,11 +3,15 @@ import 'package:ar_rtc_engine/src/enum_converter.dart';
 import 'package:flutter/services.dart';
 import 'classes.dart';
 import 'enums.dart';
+import 'events.dart';
 
 class RtcMediaPlayer with RtcMediaPlayerInterface{
   static const MethodChannel _methodChannel = MethodChannel('ar_rtc_media_player');
+  static const EventChannel _eventChannel =
+  EventChannel('ar_rtc_media_player/events');
+  static StreamSubscription _subscription;
   static RtcMediaPlayer _mediaPlayer;
-
+  RtcMediaPlayerEventHandler _handler;
 
   static Future<RtcMediaPlayer> create() async {
     if(_mediaPlayer ==null){
@@ -16,7 +20,15 @@ class RtcMediaPlayer with RtcMediaPlayerInterface{
     }
     return _mediaPlayer;
   }
-
+  void registerPlayerObserver(RtcMediaPlayerEventHandler handler) {
+    _handler = handler;
+    _subscription ??= _eventChannel.receiveBroadcastStream().listen((event) {
+      final eventMap = Map<dynamic, dynamic>.from(event);
+      final methodName = eventMap['methodName'] as String;
+      final data = List<dynamic>.from(eventMap['data']);
+      _handler?.process(methodName, data);
+    });
+  }
   @override
   Future<void> adjustPlayoutVolume(int vol) {
     return _methodChannel.invokeMethod('adjustPlayoutVolume', {
@@ -96,11 +108,6 @@ class RtcMediaPlayer with RtcMediaPlayerInterface{
   }
 
   @override
-  Future<void> setView() {
-
-  }
-
-  @override
   Future<void> stop() {
     return _methodChannel.invokeMethod("stop");
   }
@@ -116,8 +123,6 @@ mixin RtcMediaPlayerInterface {
   Future<void> pause();
 
   Future<void> stop();
-
-  Future<void> setView();
 
   Future<void> seek(int pos);
 
