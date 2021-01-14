@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
     await [Permission.camera, Permission.microphone, Permission.storage]
         .request();
     ///* AppID * anyRTC 为 App 开发者签发的 App ID。每个项目都应该有一个独一无二的 App ID。如果你的开发包里没有 App ID，请从anyRTC官网(https://www.anyrtc.io)申请一个新的 App ID
-    var engine = await RtcEngine.create('YOU_APP_ID');
+    var engine = await RtcEngine.create('YOUR APP ID');
     //var streamKit = await StreamKit.create();
     engine.setEventHandler(RtcEngineEventHandler(
         joinChannelSuccess: (String channel, String uid, int elapsed) {
@@ -51,6 +51,8 @@ class _MyAppState extends State<MyApp> {
       setState(() {
         _remoteUid = null;
       });
+    },rejoinChannelSuccess:(String channel, String uid, int elapsed) {
+      print('rejoinChannelSuccess ${channel} ${uid}');
     }));
     await engine.enableVideo();
     await engine.joinChannel(null, '909090', "0");

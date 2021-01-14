@@ -150,7 +150,7 @@ class RtcEngineEventHandler {
   ///
   /// The `RtcStatsCallback` typedef includes the following parameter:
   /// - [RtcStats] `stats`: Statistics of the call.
-  RtcStatsCallback rejoinChannelSuccess;
+  UidWithElapsedAndChannelCallback rejoinChannelSuccess;
 
   /// Occurs when a user leaves the channel.
   ///
@@ -1063,7 +1063,7 @@ class RtcEngineEventHandler {
         break;
       case 'RejoinChannelSuccess':
         rejoinChannelSuccess
-            ?.call(RtcStats.fromJson(Map<String, dynamic>.from(data[0])));
+            ?.call(data[0], data[1], data[2]);
         break;
       case 'LeaveChannel':
         leaveChannel
