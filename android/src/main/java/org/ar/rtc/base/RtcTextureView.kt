@@ -1,6 +1,7 @@
 package org.ar.rtc.base
 
 import android.content.Context
+import android.graphics.Color
 import android.view.TextureView
 import android.widget.FrameLayout
 import android.widget.RelativeLayout
@@ -23,6 +24,7 @@ class RtcTextureView(
             throw RuntimeException("Please init RtcEngine first!")
         }
         canvas = VideoCanvas(texture)
+        setBackgroundColor(Color.BLACK)
 
         //addView(texture)
 
