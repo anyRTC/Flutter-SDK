@@ -2,6 +2,7 @@ package org.ar.rtc.base
 
 import android.content.Context
 import android.graphics.Color
+import android.view.Gravity
 import android.view.TextureView
 import android.widget.FrameLayout
 import android.widget.RelativeLayout
@@ -9,10 +10,11 @@ import org.ar.rtc.RtcChannel
 import org.ar.rtc.RtcEngine
 import org.ar.rtc.video.VideoCanvas
 import java.lang.ref.WeakReference
+import java.util.logging.Handler
 
 class RtcTextureView(
         context: Context
-) : RelativeLayout(context) {
+) : FrameLayout(context) {
     private var texture: TextureView
     private var canvas: VideoCanvas
     private var channel: WeakReference<RtcChannel>? = null
@@ -25,20 +27,20 @@ class RtcTextureView(
         }
         canvas = VideoCanvas(texture)
         setBackgroundColor(Color.BLACK)
-
-        //addView(texture)
-
+//        addView(texture)
         addView(texture,LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT).apply {
-            addRule(CENTER_IN_PARENT)
+            gravity = Gravity.CENTER
         })
+
     }
 
 
-    fun setData(engine: RtcEngine, channel: RtcChannel?, uid: String) {
+    fun setData(engine: RtcEngine, channel: RtcChannel?, uid: String?) {
         this.channel = if (channel != null) WeakReference(channel) else null
         canvas.channelId = this.channel?.get()?.channelId()
         canvas.uid = uid
         setupVideoCanvas(engine)
+
     }
 
     fun resetVideoCanvas(engine: RtcEngine) {
@@ -61,6 +63,7 @@ class RtcTextureView(
     fun setRenderMode(engine: RtcEngine, @Annotations.ArVideoRenderMode renderMode: Int) {
         canvas.renderMode = renderMode
         setupRenderMode(engine)
+
     }
 
     fun setMirrorMode(engine: RtcEngine, @Annotations.ArVideoMirrorMode mirrorMode: Int) {

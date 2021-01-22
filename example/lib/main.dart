@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
     await [Permission.camera, Permission.microphone, Permission.storage]
         .request();
     ///* AppID * anyRTC 为 App 开发者签发的 App ID。每个项目都应该有一个独一无二的 App ID。如果你的开发包里没有 App ID，请从anyRTC官网(https://www.anyrtc.io)申请一个新的 App ID
-    var engine = await RtcEngine.create('YOUR APP ID');
+    var engine = await RtcEngine.create('YOUR APPID');
     //var streamKit = await StreamKit.create();
     engine.setEventHandler(RtcEngineEventHandler(
         joinChannelSuccess: (String channel, String uid, int elapsed) {
@@ -49,17 +49,13 @@ class _MyAppState extends State<MyApp> {
     }, userOffline: (String uid, UserOfflineReason reason) {
       print('userOffline ${uid}');
       setState(() {
-        _remoteUid = null;
+        _remoteUid = "";
       });
     },rejoinChannelSuccess:(String channel, String uid, int elapsed) {
       print('rejoinChannelSuccess ${channel} ${uid}');
     }));
     await engine.enableVideo();
-    await engine.joinChannel(null, '909090', "0");
-    //streamKit.pushStream("rtmp://push.ali.teameeting.cn/anyrtc/123456789");
-    // var player = await RtcMediaPlayer.create();
-    // player.open("http://vfx.mtime.cn/Video/2019/03/19/mp4/190319222227698228.mp4",0);
-    // player.play();
+    await engine.joinChannel(null, '909090', "");//userId = ""时 sdk会自动生成一个
   }
 
   @override
@@ -101,7 +97,7 @@ class _MyAppState extends State<MyApp> {
 
   Widget _renderLocalPreview() {
     if (_joined) {
-      return RtcLocalView.SurfaceView(renderMode: VideoRenderMode.Hidden);
+      return RtcLocalView.SurfaceView(renderMode: VideoRenderMode.Fit);
     } else {
       return Text(
         'Please join channel first',
@@ -112,7 +108,7 @@ class _MyAppState extends State<MyApp> {
 
   Widget _renderRemoteVideo() {
     if (_remoteUid != "") {
-      return RtcRemoteView.SurfaceView(uid: _remoteUid);
+      return RtcRemoteView.SurfaceView(uid: _remoteUid,renderMode: VideoRenderMode.Fit);
     } else {
       return Text(
         'Please wait remote user join',

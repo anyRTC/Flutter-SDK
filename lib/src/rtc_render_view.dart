@@ -142,7 +142,7 @@ class _RtcSurfaceViewState extends State<RtcSurfaceView> {
   }
 
   void setData() {
-    if (widget.uid == null) return;
+    if (widget.uid == "") return;
     _channels[_id]?.invokeMethod('setData', {
       'data': {'uid': widget.uid, 'channelId': widget.channelId}
     });
@@ -216,7 +216,7 @@ class RtcTextureView extends StatefulWidget {
     Key key,
     @required this.uid,
     this.channelId,
-    this.renderMode = VideoRenderMode.Fit,
+    this.renderMode = VideoRenderMode.Hidden,
     this.mirrorMode = VideoMirrorMode.Auto,
     this.onPlatformViewCreated,
     this.gestureRecognizers,
@@ -284,7 +284,7 @@ class _RtcTextureViewState extends State<RtcTextureView> {
   }
 
   void setData() {
-    if (widget.uid == null) return;
+    if (widget.uid == "") return;
     _channels[_id]?.invokeMethod('setData', {
       'data': {'uid': widget.uid, 'channelId': widget.channelId}
     });
@@ -293,6 +293,7 @@ class _RtcTextureViewState extends State<RtcTextureView> {
   void setRenderMode() {
     if (widget.renderMode == null) return;
     _renderMode = VideoRenderModeConverter(widget.renderMode).value();
+    print("=================");
     _channels[_id]?.invokeMethod('setRenderMode', {'renderMode': _renderMode});
   }
 
