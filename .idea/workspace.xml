@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="update android">
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcMediaPlayerEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcMediaPlayerView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArMediaPlayerViewFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcMediaPlayer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcMediaPlayer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcEnginePlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcEnginePlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcMediaPlayerPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcMediaPlayerPlugin.kt" afterDir="false" />
+    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="add black bg android">
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/rtc_media_player.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rtc_media_player.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/enum_converter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/enum_converter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/enum_converter.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/enum_converter.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/enums.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/enums.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/events.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/events.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/rtc_media_player.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_media_player.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/rtc_player_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_player_view.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +116,9 @@
     <option name="localTasksCounter" value="9" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add android sdk" />
     <MESSAGE value="update android" />
@@ -148,26 +138,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="481" y="215" key="AndroidProcessChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1610269506351" />
-    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1609920417739">
+    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1611711678231">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1609920417739" />
-    <state width="1463" height="363" key="GridCell.Tab.0.bottom" timestamp="1610269543799">
+    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1611711678231" />
+    <state width="1071" height="474" key="GridCell.Tab.0.bottom" timestamp="1611712126639">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1463" height="363" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1610269543799" />
-    <state width="1463" height="363" key="GridCell.Tab.0.center" timestamp="1610269543798">
+    <state width="1071" height="474" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1611712126639" />
+    <state width="1071" height="474" key="GridCell.Tab.0.center" timestamp="1611712126638">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1463" height="363" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1610269543798" />
-    <state width="1463" height="363" key="GridCell.Tab.0.left" timestamp="1610269543798">
+    <state width="1071" height="474" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1611712126638" />
+    <state width="1071" height="474" key="GridCell.Tab.0.left" timestamp="1611712126638">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1463" height="363" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1610269543798" />
-    <state width="1463" height="363" key="GridCell.Tab.0.right" timestamp="1610269543799">
+    <state width="1071" height="474" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1611712126638" />
+    <state width="1071" height="474" key="GridCell.Tab.0.right" timestamp="1611712126638">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1463" height="363" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1610269543799" />
+    <state width="1071" height="474" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1611712126638" />
     <state x="96" y="95" width="1221" height="723" key="MergeDialog" timestamp="1608876522234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
