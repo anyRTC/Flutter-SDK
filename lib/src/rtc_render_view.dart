@@ -170,144 +170,144 @@ class _RtcSurfaceViewState extends State<RtcSurfaceView> {
   }
 }
 
-/// Use TextureView in Android.
-/// Not support for iOS.
-/// [TargetPlatform.android]
-class RtcTextureView extends StatefulWidget {
-  /// User ID.
-  final String uid;
-
-  /// The unique channel name for the RTC session in the string format. The string length must be less than 64 bytes. Supported character scopes are:
-  /// - All lowercase English letters: a to z.
-  /// - All uppercase English letters: A to Z.
-  /// - All numeric characters: 0 to 9.
-  /// - The space character.
-  /// - Punctuation characters and other symbols, including: "!", "#", "$", "%", "&", "(", ")", "+", "-", ":", ";", "<", "=", ".", ">", "?", "@", "[", "]", "^", "_", " {", "}", "|", "~", ",".
-  ///
-  /// **Note**
-  /// - The default value is the empty string "". Use the default value if the user joins the channel using the [RtcEngine.joinChannel] method in the [RtcEngine] class.
-  /// - If the user joins the channel using the [RtcChannel.joinChannel] method in the [RtcChannel] class, set this parameter as the channelId of the [RtcChannel] object.
-  final String channelId;
-
-  /// The rendering mode of the video view.
-  final VideoRenderMode renderMode;
-
-  /// The video mirror mode.
-  final VideoMirrorMode mirrorMode;
-
-  /// Callback signature for when a platform view was created.
-  ///
-  /// `id` is the platform view's unique identifier.
-  final PlatformViewCreatedCallback onPlatformViewCreated;
-
-  /// Which gestures should be consumed by the web view.
-  ///
-  /// It is possible for other gesture recognizers to be competing with the web view on pointer
-  /// events, e.g if the web view is inside a [ListView] the [ListView] will want to handle
-  /// vertical drags. The web view will claim gestures that are recognized by any of the
-  /// recognizers on this list.
-  ///
-  /// When this set is empty or null, the web view will only handle pointer events for gestures that
-  /// were not claimed by any other gesture recognizer.
-  final Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers;
-
-  /// Constructs a [RtcTextureView]
-  RtcTextureView({
-    Key key,
-    @required this.uid,
-    this.channelId,
-    this.renderMode = VideoRenderMode.Hidden,
-    this.mirrorMode = VideoMirrorMode.Auto,
-    this.onPlatformViewCreated,
-    this.gestureRecognizers,
-  }) : super(key: key ?? Key('texture-${channelId}-${uid}'));
-
-  @override
-  State<StatefulWidget> createState() {
-    return _RtcTextureViewState();
-  }
-}
-
-class _RtcTextureViewState extends State<RtcTextureView> {
-  int _id;
-  int _renderMode;
-  int _mirrorMode;
-
-  @override
-  Widget build(BuildContext context) {
-    if (defaultTargetPlatform == TargetPlatform.android) {
-      return GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        child: AndroidView(
-          viewType: 'ArTextureView',
-          onPlatformViewCreated: onPlatformViewCreated,
-          hitTestBehavior: PlatformViewHitTestBehavior.transparent,
-          creationParams: {
-            'data': {'uid': widget.uid, 'channelId': widget.channelId},
-            'renderMode': _renderMode,
-            'mirrorMode': _mirrorMode,
-          },
-          creationParamsCodec: const StandardMessageCodec(),
-          gestureRecognizers: widget.gestureRecognizers,
-        ),
-      );
-    }
-    return Text('$defaultTargetPlatform is not yet supported by the plugin');
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    _renderMode = VideoRenderModeConverter(widget.renderMode).value();
-    _mirrorMode = VideoMirrorModeConverter(widget.mirrorMode).value();
-  }
-
-  @override
-  void didUpdateWidget(RtcTextureView oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (oldWidget.uid != widget.uid ||
-        oldWidget.channelId != widget.channelId) {
-      setData();
-    }
-    if (oldWidget.renderMode != widget.renderMode) {
-      setRenderMode();
-    }
-    if (oldWidget.mirrorMode != widget.mirrorMode) {
-      setMirrorMode();
-    }
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _channels.remove(_id);
-  }
-
-  void setData() {
-    if (widget.uid == "") return;
-    _channels[_id]?.invokeMethod('setData', {
-      'data': {'uid': widget.uid, 'channelId': widget.channelId}
-    });
-  }
-
-  void setRenderMode() {
-    if (widget.renderMode == null) return;
-    _renderMode = VideoRenderModeConverter(widget.renderMode).value();
-    print("=================");
-    _channels[_id]?.invokeMethod('setRenderMode', {'renderMode': _renderMode});
-  }
-
-  void setMirrorMode() {
-    if (widget.mirrorMode == null) return;
-    _mirrorMode = VideoMirrorModeConverter(widget.mirrorMode).value();
-    _channels[_id]?.invokeMethod('setMirrorMode', {'mirrorMode': _mirrorMode});
-  }
-
-  Future<void> onPlatformViewCreated(int id) async {
-    _id = id;
-    if (!_channels.containsKey(id)) {
-      _channels[id] = MethodChannel('ar_rtc_engine/texture_view_$id');
-    }
-    widget.onPlatformViewCreated?.call(id);
-  }
-}
+// /// Use TextureView in Android.
+// /// Not support for iOS.
+// /// [TargetPlatform.android]
+// class RtcTextureView extends StatefulWidget {
+//   /// User ID.
+//   final String uid;
+//
+//   /// The unique channel name for the RTC session in the string format. The string length must be less than 64 bytes. Supported character scopes are:
+//   /// - All lowercase English letters: a to z.
+//   /// - All uppercase English letters: A to Z.
+//   /// - All numeric characters: 0 to 9.
+//   /// - The space character.
+//   /// - Punctuation characters and other symbols, including: "!", "#", "$", "%", "&", "(", ")", "+", "-", ":", ";", "<", "=", ".", ">", "?", "@", "[", "]", "^", "_", " {", "}", "|", "~", ",".
+//   ///
+//   /// **Note**
+//   /// - The default value is the empty string "". Use the default value if the user joins the channel using the [RtcEngine.joinChannel] method in the [RtcEngine] class.
+//   /// - If the user joins the channel using the [RtcChannel.joinChannel] method in the [RtcChannel] class, set this parameter as the channelId of the [RtcChannel] object.
+//   final String channelId;
+//
+//   /// The rendering mode of the video view.
+//   final VideoRenderMode renderMode;
+//
+//   /// The video mirror mode.
+//   final VideoMirrorMode mirrorMode;
+//
+//   /// Callback signature for when a platform view was created.
+//   ///
+//   /// `id` is the platform view's unique identifier.
+//   final PlatformViewCreatedCallback onPlatformViewCreated;
+//
+//   /// Which gestures should be consumed by the web view.
+//   ///
+//   /// It is possible for other gesture recognizers to be competing with the web view on pointer
+//   /// events, e.g if the web view is inside a [ListView] the [ListView] will want to handle
+//   /// vertical drags. The web view will claim gestures that are recognized by any of the
+//   /// recognizers on this list.
+//   ///
+//   /// When this set is empty or null, the web view will only handle pointer events for gestures that
+//   /// were not claimed by any other gesture recognizer.
+//   final Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers;
+//
+//   /// Constructs a [RtcTextureView]
+//   RtcTextureView({
+//     Key key,
+//     @required this.uid,
+//     this.channelId,
+//     this.renderMode = VideoRenderMode.Hidden,
+//     this.mirrorMode = VideoMirrorMode.Auto,
+//     this.onPlatformViewCreated,
+//     this.gestureRecognizers,
+//   }) : super(key: key ?? Key('texture-${channelId}-${uid}'));
+//
+//   @override
+//   State<StatefulWidget> createState() {
+//     return _RtcTextureViewState();
+//   }
+// }
+//
+// class _RtcTextureViewState extends State<RtcTextureView> {
+//   int _id;
+//   int _renderMode;
+//   int _mirrorMode;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     if (defaultTargetPlatform == TargetPlatform.android) {
+//       return GestureDetector(
+//         behavior: HitTestBehavior.opaque,
+//         child: AndroidView(
+//           viewType: 'ArTextureView',
+//           onPlatformViewCreated: onPlatformViewCreated,
+//           hitTestBehavior: PlatformViewHitTestBehavior.transparent,
+//           creationParams: {
+//             'data': {'uid': widget.uid, 'channelId': widget.channelId},
+//             'renderMode': _renderMode,
+//             'mirrorMode': _mirrorMode,
+//           },
+//           creationParamsCodec: const StandardMessageCodec(),
+//           gestureRecognizers: widget.gestureRecognizers,
+//         ),
+//       );
+//     }
+//     return Text('$defaultTargetPlatform is not yet supported by the plugin');
+//   }
+//
+//   @override
+//   void initState() {
+//     super.initState();
+//     _renderMode = VideoRenderModeConverter(widget.renderMode).value();
+//     _mirrorMode = VideoMirrorModeConverter(widget.mirrorMode).value();
+//   }
+//
+//   @override
+//   void didUpdateWidget(RtcTextureView oldWidget) {
+//     super.didUpdateWidget(oldWidget);
+//     if (oldWidget.uid != widget.uid ||
+//         oldWidget.channelId != widget.channelId) {
+//       setData();
+//     }
+//     if (oldWidget.renderMode != widget.renderMode) {
+//       setRenderMode();
+//     }
+//     if (oldWidget.mirrorMode != widget.mirrorMode) {
+//       setMirrorMode();
+//     }
+//   }
+//
+//   @override
+//   void dispose() {
+//     super.dispose();
+//     _channels.remove(_id);
+//   }
+//
+//   void setData() {
+//     if (widget.uid == "") return;
+//     _channels[_id]?.invokeMethod('setData', {
+//       'data': {'uid': widget.uid, 'channelId': widget.channelId}
+//     });
+//   }
+//
+//   void setRenderMode() {
+//     if (widget.renderMode == null) return;
+//     _renderMode = VideoRenderModeConverter(widget.renderMode).value();
+//     print("=================");
+//     _channels[_id]?.invokeMethod('setRenderMode', {'renderMode': _renderMode});
+//   }
+//
+//   void setMirrorMode() {
+//     if (widget.mirrorMode == null) return;
+//     _mirrorMode = VideoMirrorModeConverter(widget.mirrorMode).value();
+//     _channels[_id]?.invokeMethod('setMirrorMode', {'mirrorMode': _mirrorMode});
+//   }
+//
+//   Future<void> onPlatformViewCreated(int id) async {
+//     _id = id;
+//     if (!_channels.containsKey(id)) {
+//       _channels[id] = MethodChannel('ar_rtc_engine/texture_view_$id');
+//     }
+//     widget.onPlatformViewCreated?.call(id);
+//   }
+// }

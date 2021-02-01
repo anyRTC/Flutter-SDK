@@ -34,7 +34,7 @@ class ARTextureView(
         private val rtcChannelPlugin: ArRtcChannelPlugin
 ) : PlatformView, MethodChannel.MethodCallHandler {
     private val view = RtcTextureView(context)
-    private val channel = MethodChannel(messenger, "ar_rtc_engine/texture_view_$viewId")
+    private val channel = MethodChannel(messenger, "ar_rtc_engine/surface_view_$viewId")
 
     init {
         args?.let { map ->
