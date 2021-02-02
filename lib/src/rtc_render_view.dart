@@ -68,6 +68,7 @@ class RtcSurfaceView extends StatefulWidget {
   State<StatefulWidget> createState() {
     return _RtcSurfaceViewState();
   }
+
 }
 
 class _RtcSurfaceViewState extends State<RtcSurfaceView> {

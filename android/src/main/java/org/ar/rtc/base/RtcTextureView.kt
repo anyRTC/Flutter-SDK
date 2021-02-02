@@ -1,23 +1,28 @@
 package org.ar.rtc.base
 
 import android.content.Context
+import android.graphics.Bitmap
 import android.graphics.Color
 import android.view.Gravity
 import android.view.TextureView
 import android.widget.FrameLayout
 import android.widget.RelativeLayout
+import org.ar.rtc.Constants
 import org.ar.rtc.RtcChannel
 import org.ar.rtc.RtcEngine
 import org.ar.rtc.video.VideoCanvas
+import org.webrtc.EglRenderer
+import org.webrtc.TextureViewRenderer
 import java.lang.ref.WeakReference
 import java.util.logging.Handler
 
 class RtcTextureView(
         context: Context
-) : FrameLayout(context) {
+) : RelativeLayout(context) {
     private var texture: TextureView
     private var canvas: VideoCanvas
     private var channel: WeakReference<RtcChannel>? = null
+    private var engine: RtcEngine? = null
 
     init {
         try {
@@ -36,6 +41,7 @@ class RtcTextureView(
 
 
     fun setData(engine: RtcEngine, channel: RtcChannel?, uid: String?) {
+        this.engine=engine
         this.channel = if (channel != null) WeakReference(channel) else null
         canvas.channelId = this.channel?.get()?.channelId()
         canvas.uid = uid

@@ -41,6 +41,7 @@ class ARTextureView(
             (map["data"] as? Map<*, *>)?.let { setData(it) }
             (map["renderMode"] as? Number)?.let { setRenderMode(it.toInt()) }
             (map["mirrorMode"] as? Number)?.let { setMirrorMode(it.toInt()) }
+
         }
         channel.setMethodCallHandler(this)
     }
@@ -81,7 +82,7 @@ class ARTextureView(
     }
 
     private fun setRenderMode(renderMode: Int) {
-        getEngine()?.let { view.setRenderMode(it, renderMode) }
+        getEngine()?.let { view.setRenderMode(it,renderMode) }
     }
 
     private fun setMirrorMode(mirrorMode: Int) {

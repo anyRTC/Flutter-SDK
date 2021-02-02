@@ -28,5 +28,6 @@ class SurfaceView extends RtcSurfaceView {
           gestureRecognizers: gestureRecognizers,
           onPlatformViewCreated: onPlatformViewCreated,
         );
+
 }
 
