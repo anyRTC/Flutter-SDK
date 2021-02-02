@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="">
+    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="update android sdk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArTextureViewFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArTextureViewFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/rtc_remote_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rtc_remote_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/rtc_render_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_render_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,13 +40,14 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base" />
       <recent name="$PROJECT_DIR$/android/src/main" />
       <recent name="$PROJECT_DIR$/android/src/main/kotlin/com/anyrtc/ar_rtc_engine" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/example/lib" />
+      <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -131,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612169768441</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update android sdk">
+      <created>1612238688101</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1612238688101</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,30 +161,38 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="568" y="357" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.877@0.23.1440.877" timestamp="1604452244211" />
+    <state x="483" y="172" key="#xdebugger.evaluate" timestamp="1612274008249">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="483" y="172" key="#xdebugger.evaluate/0.23.1440.877@0.23.1440.877" timestamp="1612274008249" />
     <state x="481" y="215" key="AndroidProcessChooserDialog" timestamp="1610269506351">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="481" y="215" key="AndroidProcessChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1610269506351" />
-    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1612169768083">
+    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1612266895274">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1612169768083" />
-    <state width="1233" height="393" key="GridCell.Tab.0.bottom" timestamp="1612235949664">
+    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1612266895274" />
+    <state width="599" height="466" key="DebuggerActiveHint" timestamp="1612274317933">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1233" height="393" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1612235949664" />
-    <state width="1233" height="393" key="GridCell.Tab.0.center" timestamp="1612235949664">
+    <state width="599" height="466" key="DebuggerActiveHint/0.23.1440.877@0.23.1440.877" timestamp="1612274317933" />
+    <state width="1229" height="274" key="GridCell.Tab.0.bottom" timestamp="1612277147672">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1233" height="393" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1612235949664" />
-    <state width="1233" height="393" key="GridCell.Tab.0.left" timestamp="1612235949664">
+    <state width="1229" height="274" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1612277147672" />
+    <state width="1229" height="274" key="GridCell.Tab.0.center" timestamp="1612277147672">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1233" height="393" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1612235949664" />
-    <state width="1233" height="393" key="GridCell.Tab.0.right" timestamp="1612235949664">
+    <state width="1229" height="274" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1612277147672" />
+    <state width="1229" height="274" key="GridCell.Tab.0.left" timestamp="1612277147671">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1233" height="393" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1612235949664" />
+    <state width="1229" height="274" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1612277147671" />
+    <state width="1229" height="274" key="GridCell.Tab.0.right" timestamp="1612277147672">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1229" height="274" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1612277147672" />
     <state x="96" y="95" width="1221" height="723" key="MergeDialog" timestamp="1608876522234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -186,22 +201,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="356" y="230" key="MultipleFileMergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1608876522265" />
-    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1612169759269">
+    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1612266892812">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1612169759269" />
+    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1612266892812" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1607923086527">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1607923086527" />
-    <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1612169829613">
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1612238698327">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="362" y="211" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1612169829613" />
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1612238698327" />
     <state x="503" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610256937253">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="503" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1610256937253" />
+    <state x="269" y="197" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1612274365842">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="269" y="197" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.877@0.23.1440.877" timestamp="1612274365842" />
     <state x="350" y="244" width="706" height="490" key="find.popup" timestamp="1610003777443">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -214,21 +233,25 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="363" y="224" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1609991497339" />
+    <state x="361" y="380" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1612271530728">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="361" y="380" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1440.877@0.23.1440.877" timestamp="1612271530728" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcStreamKitPlugin.kt</url>
           <line>41</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcStreamKitPlugin.kt</url>
           <line>43</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcStreamKitPlugin.kt</url>
           <line>39</line>
           <properties>
@@ -236,57 +259,30 @@
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcStreamKitPlugin.kt</url>
           <line>22</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcStreamKitPlugin.kt</url>
           <line>27</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcStreamKitPlugin.kt</url>
           <line>31</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcEnginePlugin.kt</url>
           <line>51</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/rtc_render_view.dart</url>
-          <line>173</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/rtc_render_view.dart</url>
-          <line>82</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/rtc_render_view.dart</url>
-          <line>83</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/rtc_render_view.dart</url>
-          <line>84</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/rtc_render_view.dart</url>
-          <line>80</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/rtc_render_view.dart</url>
-          <line>165</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint suspend="THREAD" type="dart-exception" />
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>

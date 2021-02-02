@@ -59,11 +59,14 @@ class RtcTextureView(
     }
 
     private fun setupVideoCanvas(engine: RtcEngine) {
-        if (canvas.uid == "0") {
-            engine.setupLocalVideo(canvas)
-        } else {
-            engine.setupRemoteVideo(canvas)
-        }
+        android.os.Handler().postDelayed({
+            if (canvas.uid == "0") {
+                engine.setupLocalVideo(canvas)
+            } else {
+                engine.setupRemoteVideo(canvas)
+            }
+        },500)
+
     }
 
     fun setRenderMode(engine: RtcEngine, @Annotations.ArVideoRenderMode renderMode: Int) {

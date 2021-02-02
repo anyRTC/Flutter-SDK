@@ -76,7 +76,6 @@ class ARTextureView(
     }
 
     private fun setData(data: Map<*, *>) {
-        println(data)
         val channel = (data["channelId"] as? String)?.let { getChannel(it) }
         getEngine()?.let { view.setData(it, channel, data["uid"] as String) }
     }
