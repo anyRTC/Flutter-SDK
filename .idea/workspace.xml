@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="update android sdk">
+    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArTextureViewFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArTextureViewFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +38,14 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/example/lib" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base" />
       <recent name="$PROJECT_DIR$/android/src/main" />
       <recent name="$PROJECT_DIR$/android/src/main/kotlin/com/anyrtc/ar_rtc_engine" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/example/lib" />
-      <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -138,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612238688101</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update android sdk">
+      <created>1612277809039</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1612277809039</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,30 +174,30 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="481" y="215" key="AndroidProcessChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1610269506351" />
-    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1612266895274">
+    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1612277808555">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1612266895274" />
+    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1612277808555" />
     <state width="599" height="466" key="DebuggerActiveHint" timestamp="1612274317933">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="599" height="466" key="DebuggerActiveHint/0.23.1440.877@0.23.1440.877" timestamp="1612274317933" />
-    <state width="1229" height="274" key="GridCell.Tab.0.bottom" timestamp="1612277147672">
+    <state width="1229" height="299" key="GridCell.Tab.0.bottom" timestamp="1612338919485">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1229" height="274" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1612277147672" />
-    <state width="1229" height="274" key="GridCell.Tab.0.center" timestamp="1612277147672">
+    <state width="1229" height="299" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1612338919485" />
+    <state width="1229" height="299" key="GridCell.Tab.0.center" timestamp="1612338919484">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1229" height="274" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1612277147672" />
-    <state width="1229" height="274" key="GridCell.Tab.0.left" timestamp="1612277147671">
+    <state width="1229" height="299" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1612338919483" />
+    <state width="1229" height="299" key="GridCell.Tab.0.left" timestamp="1612338919482">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1229" height="274" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1612277147671" />
-    <state width="1229" height="274" key="GridCell.Tab.0.right" timestamp="1612277147672">
+    <state width="1229" height="299" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1612338919482" />
+    <state width="1229" height="299" key="GridCell.Tab.0.right" timestamp="1612338919485">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1229" height="274" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1612277147672" />
+    <state width="1229" height="299" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1612338919485" />
     <state x="96" y="95" width="1221" height="723" key="MergeDialog" timestamp="1608876522234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -201,18 +206,18 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="356" y="230" key="MultipleFileMergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1608876522265" />
-    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1612266892812">
+    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1612277799897">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1612266892812" />
+    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1612277799897" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1607923086527">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1607923086527" />
-    <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1612238698327">
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1612277825515">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="362" y="211" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1612238698327" />
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1612277825515" />
     <state x="503" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610256937253">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -233,10 +238,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="363" y="224" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1609991497339" />
-    <state x="361" y="380" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1612271530728">
+    <state x="361" y="380" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1612317123873">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="361" y="380" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1440.877@0.23.1440.877" timestamp="1612271530728" />
+    <state x="361" y="380" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1440.877@0.23.1440.877" timestamp="1612317123873" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
