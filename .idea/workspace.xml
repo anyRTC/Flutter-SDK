@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,10 +160,26 @@
       <option name="project" value="LOCAL" />
       <updated>1612277809039</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update android local preview">
+      <created>1612339084256</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1612339084256</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
@@ -155,7 +188,8 @@
     <MESSAGE value="update sdk" />
     <MESSAGE value="update android native sdk" />
     <MESSAGE value="update android sdk" />
-    <option name="LAST_COMMIT_MESSAGE" value="update android sdk" />
+    <MESSAGE value="update android local preview" />
+    <option name="LAST_COMMIT_MESSAGE" value="update android local preview" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="127" key="#Project_Structure" timestamp="1604392591275">
@@ -174,10 +208,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="481" y="215" key="AndroidProcessChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1610269506351" />
-    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1612277808555">
+    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1612339084002">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1612277808555" />
+    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1612339084002" />
     <state width="599" height="466" key="DebuggerActiveHint" timestamp="1612274317933">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -206,18 +240,18 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="356" y="230" key="MultipleFileMergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1608876522265" />
-    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1612277799897">
+    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1612339049691">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1612277799897" />
+    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1612339049691" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1607923086527">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1607923086527" />
-    <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1612277825515">
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1612339086369">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="362" y="211" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1612277825515" />
+    <state x="362" y="211" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1612339086369" />
     <state x="503" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610256937253">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
