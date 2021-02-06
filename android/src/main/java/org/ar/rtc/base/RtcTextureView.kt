@@ -90,7 +90,6 @@ class RtcTextureView(
 
     fun setRenderMode(engine: RtcEngine, @Annotations.ArVideoRenderMode renderMode: Int) {
         if (uid=="0"){
-
         }else {
             canvas.renderMode = renderMode
             setupRenderMode(engine)
@@ -100,7 +99,7 @@ class RtcTextureView(
 
     fun setMirrorMode(engine: RtcEngine, @Annotations.ArVideoMirrorMode mirrorMode: Int) {
         if (uid == "0"){
-
+            localView.setMirror(mirrorMode==1)
         }else {
             canvas.mirrorMode = mirrorMode
             setupRenderMode(engine)
