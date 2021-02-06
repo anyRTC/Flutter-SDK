@@ -21,6 +21,7 @@ class RtcSurfaceView: UIView {
     private lazy var canvas: ARtcVideoCanvas = {
         var canvas = ARtcVideoCanvas()
         canvas.view = self
+        canvas.view?.backgroundColor = UIColor.black
         return canvas
     }()
     private weak var channel: ARtcChannel?

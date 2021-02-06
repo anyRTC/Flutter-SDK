@@ -1,8 +1,8 @@
 PODS:
   - ar_rtc_engine (4.1.0):
-    - ARtcKit_iOS (= 4.1.2.3)
+    - ARtcKit_iOS (= 4.1.2.4)
     - Flutter
-  - ARtcKit_iOS (4.1.2.3)
+  - ARtcKit_iOS (4.1.2.4)
   - e2e (0.0.1):
     - Flutter
   - Flutter (1.0.0)
