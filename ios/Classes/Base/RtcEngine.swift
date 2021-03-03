@@ -271,7 +271,7 @@ class RtcEngineManager: NSObject, RtcEngineInterface {
     }
 
     @objc func joinChannel(_ params: NSDictionary, _ callback: Callback) {
-        callback.code(engine?.joinChannel(byToken: params["appId"] as? String, channelId: params["channelName"] as! String, uid: params["optionalUid"] as? String))
+        callback.code(engine?.joinChannel(byToken: params["token"] as? String, channelId: params["channelName"] as! String, uid: params["optionalUid"] as? String))
     }
 
     @objc func switchChannel(_ params: NSDictionary, _ callback: Callback) {
