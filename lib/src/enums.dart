@@ -1754,6 +1754,7 @@ enum VideoRemoteStateReason {
   AudioFallbackRecovery,
 }
 
+/// The brightness level of the video image captured by the local camera.
 /// Video display mode.
 enum VideoRenderMode {
   /// Uniformly scale the video until it fills the visible boundaries (cropped). One dimension of the video may have clipped contents.

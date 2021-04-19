@@ -19,12 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="update android sdk">
+    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="update android">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rtc_local_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rtc_local_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rtc_remote_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rtc_remote_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/classes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/classes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/classes.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/classes.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/enum_converter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/enum_converter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/enum_converter.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/enum_converter.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/enums.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/enums.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/events.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/events.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/rtc_channel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_channel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/rtc_engine.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_engine.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/rtc_media_player.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_media_player.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/rtc_render_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_render_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/rtc_stream_kit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_stream_kit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +52,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jlxZUc1xxIhvyucSuUapI0Hqam" />
@@ -185,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612521987734</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update android">
+      <created>1618829055489</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1618829055489</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,12 +226,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add android sdk" />
-    <MESSAGE value="update android" />
     <MESSAGE value="update sdk" />
     <MESSAGE value="update android native sdk" />
     <MESSAGE value="update android local preview" />
     <MESSAGE value="update android sdk" />
-    <option name="LAST_COMMIT_MESSAGE" value="update android sdk" />
+    <MESSAGE value="update android" />
+    <option name="LAST_COMMIT_MESSAGE" value="update android" />
   </component>
   <component name="WindowStateProjectService">
     <state x="483" y="172" key="#xdebugger.evaluate" timestamp="1612274008249">
@@ -218,38 +242,38 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="481" y="215" key="AndroidProcessChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1610269506351" />
-    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1618815898871">
+    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1618836792283">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1618815898871" />
+    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1618836792283" />
     <state width="599" height="466" key="DebuggerActiveHint" timestamp="1612274317933">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="599" height="466" key="DebuggerActiveHint/0.23.1440.877@0.23.1440.877" timestamp="1612274317933" />
-    <state x="100" y="123" width="1240" height="677" key="DiffContextDialog" timestamp="1614757893094">
+    <state x="100" y="123" width="1240" height="677" key="DiffContextDialog" timestamp="1618836791207">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="100" y="123" width="1240" height="677" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1614757893094" />
-    <state width="1177" height="435" key="GridCell.Tab.0.bottom" timestamp="1618826350526">
+    <state x="100" y="123" width="1240" height="677" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1618836791207" />
+    <state width="1176" height="435" key="GridCell.Tab.0.bottom" timestamp="1618836880588">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1177" height="435" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1618826350526" />
-    <state width="1177" height="435" key="GridCell.Tab.0.center" timestamp="1618826350525">
+    <state width="1176" height="435" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1618836880588" />
+    <state width="1176" height="435" key="GridCell.Tab.0.center" timestamp="1618836880587">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1177" height="435" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1618826350525" />
-    <state width="1177" height="435" key="GridCell.Tab.0.left" timestamp="1618826350525">
+    <state width="1176" height="435" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1618836880587" />
+    <state width="1176" height="435" key="GridCell.Tab.0.left" timestamp="1618836880587">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1177" height="435" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1618826350525" />
-    <state width="1177" height="435" key="GridCell.Tab.0.right" timestamp="1618826350526">
+    <state width="1176" height="435" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1618836880587" />
+    <state width="1176" height="435" key="GridCell.Tab.0.right" timestamp="1618836880587">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1177" height="435" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1618826350526" />
-    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1618815896320">
+    <state width="1176" height="435" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1618836880587" />
+    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1618829033083">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1618815896320" />
+    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1618829033083" />
     <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1612521989863">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -262,6 +286,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="269" y="197" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.877@0.23.1440.877" timestamp="1612274365842" />
+    <state x="189" y="231" width="615" height="548" key="find.popup" timestamp="1618834587957">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="189" y="231" width="615" height="548" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1618834587957" />
     <state x="733" y="260" key="git4idea.merge.GitPullDialog" timestamp="1611712235501">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -311,6 +339,11 @@
           <url>file://$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtc_engine/ArRtcEnginePlugin.kt</url>
           <line>51</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcEngine.kt</url>
+          <line>303</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

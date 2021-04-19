@@ -6,25 +6,28 @@ import 'package:flutter/widgets.dart';
 import './src/enums.dart';
 import './src/rtc_render_view.dart';
 
-/// (Android only) SurfaceView.
-///
-/// Please use [UIView](https://developer.apple.com/documentation/uikit/uiview) for iOS.
+/// SurfaceView.
 class SurfaceView extends RtcSurfaceView {
   /// Constructs a [SurfaceView]
   SurfaceView({
-    Key key,
-    VideoRenderMode renderMode = VideoRenderMode.Hidden,
-    String channelId,
-    VideoMirrorMode mirrorMode = VideoMirrorMode.Auto,
-    Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
-    PlatformViewCreatedCallback onPlatformViewCreated,
+    Key? key,
+    String? channelId,
+    renderMode = VideoRenderMode.Hidden,
+    mirrorMode = VideoMirrorMode.Auto,
+    PlatformViewCreatedCallback? onPlatformViewCreated,
+    Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers,
   }) : super(
-            key: key,
-            renderMode: renderMode,
-            channelId: channelId,
-            mirrorMode: mirrorMode,
-            gestureRecognizers: gestureRecognizers,
-            onPlatformViewCreated: onPlatformViewCreated,
-            uid: "0");
+          key: key,
+
+          channelId: channelId,
+          renderMode: renderMode,
+          mirrorMode: mirrorMode,
+       
+          onPlatformViewCreated: onPlatformViewCreated,
+          gestureRecognizers: gestureRecognizers,
+          uid: "0"
+        );
 }
+
+
 

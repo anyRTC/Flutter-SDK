@@ -7,9 +7,9 @@ import 'enums.dart';
 class StreamKit with RtcStreamKitInterface{
 
   static const MethodChannel _methodChannel = MethodChannel('ar_rtc_stream_kit');
-  static StreamKit _streamKit;
+  static StreamKit? _streamKit;
 
-  static Future<StreamKit> create() async {
+  static Future<StreamKit?> create() async {
     if(_streamKit ==null){
       await _methodChannel.invokeMethod("createInstance",{'name': "stream"});
       _streamKit = StreamKit();

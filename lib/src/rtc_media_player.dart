@@ -9,11 +9,11 @@ class RtcMediaPlayer with RtcMediaPlayerInterface{
   static const MethodChannel _methodChannel = MethodChannel('ar_rtc_media_player');
   static const EventChannel _eventChannel =
   EventChannel('ar_rtc_media_player/events');
-  static StreamSubscription _subscription;
-  static RtcMediaPlayer _mediaPlayer;
-  RtcMediaPlayerEventHandler _handler;
+  static StreamSubscription? _subscription;
+  static RtcMediaPlayer? _mediaPlayer;
+  RtcMediaPlayerEventHandler? _handler;
 
-  static Future<RtcMediaPlayer> create() async {
+  static Future<RtcMediaPlayer?> create() async {
     if(_mediaPlayer ==null){
       await _methodChannel.invokeMethod("createInstance");
       _mediaPlayer = RtcMediaPlayer();
@@ -43,37 +43,37 @@ class RtcMediaPlayer with RtcMediaPlayerInterface{
   }
 
   @override
-  Future<int> getDuration() {
+  Future<int?> getDuration() {
    return _methodChannel.invokeMethod("getDuration");
   }
 
   @override
-  Future<int> getPlayPosition() {
+  Future<int?> getPlayPosition() {
     return _methodChannel.invokeMethod("getPlayPosition");
   }
 
   @override
-  Future<int> getPlayoutVolume() {
+  Future<int?> getPlayoutVolume() {
     return _methodChannel.invokeMethod("getPlayoutVolume");
   }
 
   @override
-  Future<int> getState() {
+  Future<int?> getState() {
     return _methodChannel.invokeMethod("getState");
   }
 
   @override
-  Future<int> getStreamByIndex() {
+  Future<int?> getStreamByIndex() {
     return _methodChannel.invokeMethod("getStreamByIndex");
   }
 
   @override
-  Future<int> getStreamCount() {
+  Future<int?> getStreamCount() {
     return _methodChannel.invokeMethod("getStreamCount");
   }
 
   @override
-  Future<bool> isMuted() {
+  Future<bool?> isMuted() {
     return _methodChannel.invokeMethod("isMuted");
   }
 
@@ -128,23 +128,23 @@ mixin RtcMediaPlayerInterface {
 
   Future<void> mute(bool mute);
 
-  Future<bool> isMuted();
+  Future<bool?> isMuted();
 
   Future<void> adjustPlayoutVolume(int vol);
 
-  Future<int> getPlayoutVolume();
+  Future<int?> getPlayoutVolume();
 
-  Future<int> getPlayPosition();
+  Future<int?> getPlayPosition();
 
-  Future<int> getDuration();
+  Future<int?> getDuration();
 
-  Future<int> getState();
+  Future<int?> getState();
 
   Future<void> setRenderMode(VideoRenderMode mode);
 
-  Future<int> getStreamCount();
+  Future<int?> getStreamCount();
 
-  Future<int> getStreamByIndex();
+  Future<int?> getStreamByIndex();
 
   Future<void> destroy();
 }

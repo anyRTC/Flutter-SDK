@@ -15,18 +15,18 @@ class RtcChannel with RtcChannelInterface {
   static const EventChannel _eventChannel =
       EventChannel('ar_rtc_channel/events');
 
-  static StreamSubscription _subscription;
+  static StreamSubscription? _subscription;
 
   static final Map<String, RtcChannel> _channels = {};
 
   /// The ID of RtcChannel
   final String channelId;
 
-  RtcChannelEventHandler _handler;
+  RtcChannelEventHandler? _handler;
 
   RtcChannel._(this.channelId);
 
-  Future<T> _invokeMethod<T>(String method, [Map<String, dynamic> arguments]) {
+  Future<T?> _invokeMethod<T>(String method, [Map<String, dynamic>? arguments]) {
     return _methodChannel.invokeMethod(
         method,
         arguments == null
@@ -46,10 +46,10 @@ class RtcChannel with RtcChannelInterface {
   /// - The space character.
   /// - Punctuation characters and other symbols, including: "!", "#", "$", "%", "&", "(", ")", "+", "-", ":", ";", "<", "=", ".", ">", "?", "@", "[", "]", "^", "_", " {", "}", "|", "~", ",".
   static Future<RtcChannel> create(String channelId) async {
-    if (_channels.containsKey(channelId)) return _channels[channelId];
+    if (_channels.containsKey(channelId)) return _channels[channelId]!;
     await _methodChannel.invokeMethod('create', {'channelId': channelId});
     _channels[channelId] = RtcChannel._(channelId);
-    return _channels[channelId];
+    return _channels[channelId]!;
   }
 
   /// Destroys all [RtcChannel] instance.
@@ -119,7 +119,7 @@ class RtcChannel with RtcChannelInterface {
   }
 
   @override
-  Future<String> getCallId() {
+  Future<String?> getCallId() {
     return _invokeMethod('getCallId');
   }
 
