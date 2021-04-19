@@ -19,12 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="">
+    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="update android sdk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/Base/RtcEngine.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/Base/RtcEngine.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,10 +218,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="481" y="215" key="AndroidProcessChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1610269506351" />
-    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1612521987471">
+    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1618815898871">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1612521987471" />
+    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1618815898871" />
     <state width="599" height="466" key="DebuggerActiveHint" timestamp="1612274317933">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -229,38 +230,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="100" y="123" width="1240" height="677" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1614757893094" />
-    <state width="1219" height="167" key="GridCell.Tab.0.bottom" timestamp="1614757869219">
+    <state width="1177" height="435" key="GridCell.Tab.0.bottom" timestamp="1618826350526">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1219" height="167" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1614757869219" />
-    <state width="1219" height="167" key="GridCell.Tab.0.center" timestamp="1614757869218">
+    <state width="1177" height="435" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1618826350526" />
+    <state width="1177" height="435" key="GridCell.Tab.0.center" timestamp="1618826350525">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1219" height="167" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1614757869218" />
-    <state width="1219" height="167" key="GridCell.Tab.0.left" timestamp="1614757869218">
+    <state width="1177" height="435" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1618826350525" />
+    <state width="1177" height="435" key="GridCell.Tab.0.left" timestamp="1618826350525">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1219" height="167" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1614757869218" />
-    <state width="1219" height="167" key="GridCell.Tab.0.right" timestamp="1614757869218">
+    <state width="1177" height="435" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1618826350525" />
+    <state width="1177" height="435" key="GridCell.Tab.0.right" timestamp="1618826350526">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1219" height="167" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1614757869218" />
-    <state x="96" y="95" width="1221" height="723" key="MergeDialog" timestamp="1608876522234">
+    <state width="1177" height="435" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1618826350526" />
+    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1618815896320">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="96" y="95" width="1221" height="723" key="MergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1608876522234" />
-    <state x="356" y="230" key="MultipleFileMergeDialog" timestamp="1608876522265">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="356" y="230" key="MultipleFileMergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1608876522265" />
-    <state x="457" y="189" key="RollbackChangesDialog" timestamp="1612521976223">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1612521976223" />
-    <state x="221" y="100" key="SettingsEditor" timestamp="1607923086527">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1607923086527" />
+    <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1618815896320" />
     <state x="362" y="211" key="Vcs.Push.Dialog.v2" timestamp="1612521989863">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -273,18 +262,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="269" y="197" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.877@0.23.1440.877" timestamp="1612274365842" />
-    <state x="350" y="244" width="706" height="490" key="find.popup" timestamp="1610003777443">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="350" y="244" width="706" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1610003777443" />
     <state x="733" y="260" key="git4idea.merge.GitPullDialog" timestamp="1611712235501">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="733" y="260" key="git4idea.merge.GitPullDialog/0.23.1440.877@0.23.1440.877" timestamp="1611712235501" />
-    <state x="363" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1609991497339">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="363" y="224" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1609991497339" />
     <state x="361" y="380" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1612317123873">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

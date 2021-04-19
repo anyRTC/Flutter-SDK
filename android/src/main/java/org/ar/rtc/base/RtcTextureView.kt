@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Color
 import android.view.Gravity
 import android.view.TextureView
+import android.widget.FrameLayout
 import android.widget.RelativeLayout
 import org.ar.rtc.RtcChannel
 import org.ar.rtc.RtcEngine
@@ -132,11 +133,11 @@ import java.lang.ref.WeakReference
 //    }
 //}
 class RtcTextureView(
-        context: Context
+  context: Context
 ) : RelativeLayout(context) {
-    private var texture: TextureView
-    private var canvas: VideoCanvas
-    private var channel: WeakReference<RtcChannel>? = null
+  private var texture: TextureView
+  private var canvas: VideoCanvas
+  private var channel: WeakReference<RtcChannel>? = null
 
     init {
         try {
@@ -146,11 +147,9 @@ class RtcTextureView(
         }
         canvas = VideoCanvas(texture)
         setBackgroundColor(Color.BLACK)
-
-        //addView(texture)
-
         addView(texture,LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT).apply {
-            addRule(CENTER_IN_PARENT)
+           addRule(CENTER_IN_PARENT)
+            //gravity = Gravity.CENTER
         })
     }
 
@@ -171,13 +170,20 @@ class RtcTextureView(
         }
     }
 
-    private fun setupVideoCanvas(engine: RtcEngine) {
-        if (canvas.uid == "0") {
-            engine.setupLocalVideo(canvas)
-        } else {
-            engine.setupRemoteVideo(canvas)
-        }
+  private fun setupVideoCanvas(engine: RtcEngine) {
+    removeAllViews()
+    texture = RtcEngine.CreateRendererView(context.applicationContext)
+      addView(texture,LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT).apply {
+          addRule(CENTER_IN_PARENT)
+      })
+    canvas.getView().release()
+    canvas.view = texture
+    if (canvas.uid == "0") {
+      engine.setupLocalVideo(canvas)
+    } else {
+      engine.setupRemoteVideo(canvas)
     }
+  }
 
     fun setRenderMode(engine: RtcEngine, @Annotations.ArVideoRenderMode renderMode: Int) {
         canvas.renderMode = renderMode
