@@ -19,25 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="update android">
+    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="update dart">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/rtc_local_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rtc_local_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/rtc_remote_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rtc_remote_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/classes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/classes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/classes.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/classes.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/enum_converter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/enum_converter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/enum_converter.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/enum_converter.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/enums.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/enums.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/events.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/events.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/rtc_channel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_channel.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/rtc_engine.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_engine.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/rtc_media_player.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_media_player.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/rtc_render_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_render_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/rtc_stream_kit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_stream_kit.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +51,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -242,10 +230,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="481" y="215" key="AndroidProcessChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1610269506351" />
-    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1618836792283">
+    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1618837453849">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1618836792283" />
+    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1618837453849" />
     <state width="599" height="466" key="DebuggerActiveHint" timestamp="1612274317933">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -254,22 +242,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="100" y="123" width="1240" height="677" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1618836791207" />
-    <state width="1176" height="435" key="GridCell.Tab.0.bottom" timestamp="1618836880588">
+    <state width="1176" height="435" key="GridCell.Tab.0.bottom" timestamp="1618837768935">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1176" height="435" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1618836880588" />
-    <state width="1176" height="435" key="GridCell.Tab.0.center" timestamp="1618836880587">
+    <state width="1176" height="435" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1618837768935" />
+    <state width="1176" height="435" key="GridCell.Tab.0.center" timestamp="1618837768934">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1176" height="435" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1618836880587" />
-    <state width="1176" height="435" key="GridCell.Tab.0.left" timestamp="1618836880587">
+    <state width="1176" height="435" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1618837768934" />
+    <state width="1176" height="435" key="GridCell.Tab.0.left" timestamp="1618837768934">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1176" height="435" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1618836880587" />
-    <state width="1176" height="435" key="GridCell.Tab.0.right" timestamp="1618836880587">
+    <state width="1176" height="435" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1618837768934" />
+    <state width="1176" height="435" key="GridCell.Tab.0.right" timestamp="1618837768934">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1176" height="435" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1618836880587" />
+    <state width="1176" height="435" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1618837768934" />
     <state x="457" y="189" key="RollbackChangesDialog" timestamp="1618829033083">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

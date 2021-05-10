@@ -1,3 +1,3 @@
-## 0.0.1
+## 4.2.0.0
 
-* TODO: Describe initial release.
+* 升级Dart，完善音视频模块回调。
