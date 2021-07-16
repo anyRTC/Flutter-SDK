@@ -11,6 +11,8 @@ import org.ar.rtc.RtcEngine
 import org.ar.rtc.mediaio.ARTextureView
 import org.ar.rtc.mediaio.MediaIO
 import org.ar.rtc.video.VideoCanvas
+import org.ar.rtc_engine.ArRtcEnginePlugin
+import org.webrtc.TextureViewRenderer
 import java.lang.ref.WeakReference
 
 //class RtcTextureView(
@@ -133,25 +135,11 @@ import java.lang.ref.WeakReference
 //    }
 //}
 class RtcTextureView(
-  context: Context
+        context: Context
 ) : RelativeLayout(context) {
-  private var texture: TextureView
-  private var canvas: VideoCanvas
-  private var channel: WeakReference<RtcChannel>? = null
-
-    init {
-        try {
-            texture = RtcEngine.CreateRendererView(context)
-        } catch (e: UnsatisfiedLinkError) {
-            throw RuntimeException("Please init RtcEngine first!")
-        }
-        canvas = VideoCanvas(texture)
-        setBackgroundColor(Color.BLACK)
-        addView(texture,LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT).apply {
-           addRule(CENTER_IN_PARENT)
-            //gravity = Gravity.CENTER
-        })
-    }
+    private var texture: TextureView? = null
+    private var canvas: VideoCanvas = VideoCanvas(texture)
+    private var channel: WeakReference<RtcChannel>? = null
 
 
     fun setData(engine: RtcEngine, channel: RtcChannel?, uid: String) {
@@ -170,20 +158,25 @@ class RtcTextureView(
         }
     }
 
-  private fun setupVideoCanvas(engine: RtcEngine) {
-    removeAllViews()
-    texture = RtcEngine.CreateRendererView(context.applicationContext)
-      addView(texture,LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT).apply {
-          addRule(CENTER_IN_PARENT)
-      })
-    canvas.getView().release()
-    canvas.view = texture
-    if (canvas.uid == "0") {
-      engine.setupLocalVideo(canvas)
-    } else {
-      engine.setupRemoteVideo(canvas)
+    private fun setupVideoCanvas(engine: RtcEngine) {
+        removeAllViews()
+        LocalViewManager.videoViewArray.find { it.uid == canvas.uid }?.let {
+            it.getView().release()
+            LocalViewManager.videoViewArray.remove(it)
+        }
+        texture = RtcEngine.CreateRendererView(context.applicationContext)
+        addView(texture, LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT).apply {
+            addRule(CENTER_IN_PARENT)
+        })
+        setBackgroundColor(Color.BLACK)
+        canvas.view = texture
+        LocalViewManager.videoViewArray.add(canvas)
+        if (canvas.uid == "0") {
+            engine.setupLocalVideo(canvas)
+        } else {
+            engine.setupRemoteVideo(canvas)
+        }
     }
-  }
 
     fun setRenderMode(engine: RtcEngine, @Annotations.ArVideoRenderMode renderMode: Int) {
         canvas.renderMode = renderMode
@@ -210,7 +203,7 @@ class RtcTextureView(
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         val width: Int = MeasureSpec.getSize(widthMeasureSpec)
         val height: Int = MeasureSpec.getSize(heightMeasureSpec)
-        texture.layout(0, 0, width, height)
+        texture?.layout(0, 0, width, height)
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
     }
 }
