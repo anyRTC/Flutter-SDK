@@ -1,6 +1,6 @@
 name: ar_rtc_engine
 description: Flutter plugin for anyRTC Video SDK.
-version: 4.2.2
+version: 4.2.3
 homepage: https://www.anyrtc.io
 
 environment:

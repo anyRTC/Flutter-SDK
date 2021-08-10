@@ -277,6 +277,7 @@ class RtcEngineManager(
 
     fun release() {
         RtcEngine.destroy()
+        LocalViewManager.videoViewArray.clear()
         engine = null
     }
 
@@ -285,6 +286,7 @@ class RtcEngineManager(
         engine = RtcEngine.create(params["context"] as Context,params["appId"] as String,RtcEngineEventHandler { methodName, data ->
                 emit(methodName, data)
             })
+        LocalViewManager.videoViewArray.clear()
         callback.code(0)
     }
 
@@ -310,6 +312,7 @@ class RtcEngineManager(
 
     override fun leaveChannel(callback: Callback) {
         callback.code(engine?.leaveChannel())
+        LocalViewManager.videoViewArray.clear()
     }
 
     override fun renewToken(params: Map<String, *>, callback: Callback) {

@@ -15,7 +15,6 @@ import org.ar.rtc_engine.ArRtcEnginePlugin
 import org.webrtc.TextureViewRenderer
 import java.lang.ref.WeakReference
 
-
 class RtcTextureView(
         context: Context
 ) : RelativeLayout(context) {
