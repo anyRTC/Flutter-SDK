@@ -2,6 +2,7 @@ package org.ar.rtc.base
 
 import android.content.Context
 import android.graphics.Color
+import android.os.Handler
 import android.view.Gravity
 import android.view.TextureView
 import android.widget.FrameLayout
@@ -54,7 +55,7 @@ class RtcTextureView(
         canvas.view = texture
         LocalViewManager.videoViewArray.add(canvas)
         if (canvas.uid == "0") {
-            engine.setupLocalVideo(canvas)
+           Handler().postDelayed({ engine.setupLocalVideo(canvas)},500)
         } else {
             engine.setupRemoteVideo(canvas)
         }

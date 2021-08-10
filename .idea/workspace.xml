@@ -21,9 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcEngine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcEngine.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/org/ar/rtc/base/RtcTextureView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/src/utils/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/src/utils/settings.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/proguard-rules.pro" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628560802886</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fix bugs">
+      <created>1628567705339</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1628567705339</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,37 +257,38 @@
     <MESSAGE value="update dart" />
     <MESSAGE value="增加demo功能" />
     <MESSAGE value="update sdk" />
-    <option name="LAST_COMMIT_MESSAGE" value="update sdk" />
+    <MESSAGE value="fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1628560802716">
+    <state x="246" y="48" key="CommitChangelistDialog2" timestamp="1628567705076">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628560802716" />
-    <state width="1190" height="295" key="GridCell.Tab.0.bottom" timestamp="1628566393808">
+    <state x="246" y="48" key="CommitChangelistDialog2/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628567705076" />
+    <state width="1186" height="156" key="GridCell.Tab.0.bottom" timestamp="1628587273448">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1190" height="295" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628566393808" />
-    <state width="1190" height="295" key="GridCell.Tab.0.center" timestamp="1628566393808">
+    <state width="1186" height="156" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628587273448" />
+    <state width="1186" height="156" key="GridCell.Tab.0.center" timestamp="1628587273447">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1190" height="295" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628566393808" />
-    <state width="1190" height="295" key="GridCell.Tab.0.left" timestamp="1628566393808">
+    <state width="1186" height="156" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628587273447" />
+    <state width="1186" height="156" key="GridCell.Tab.0.left" timestamp="1628587273447">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1190" height="295" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628566393808" />
-    <state width="1190" height="295" key="GridCell.Tab.0.right" timestamp="1628566393808">
+    <state width="1186" height="156" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628587273447" />
+    <state width="1186" height="156" key="GridCell.Tab.0.right" timestamp="1628587273448">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1190" height="295" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628566393808" />
+    <state width="1186" height="156" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628587273448" />
     <state x="457" y="189" key="RollbackChangesDialog" timestamp="1626428864800">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="457" y="189" key="RollbackChangesDialog/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1626428864800" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1628560804725">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1628567713054">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628560804725" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628567713054" />
     <state x="412" y="216" width="615" height="490" key="find.popup" timestamp="1628560560146">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -289,6 +297,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="406" y="257" key="git4idea.merge.GitPullDialog/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1626428889191" />
+    <state x="385" y="213" key="search.everywhere.popup" timestamp="1628588815153">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" key="search.everywhere.popup/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1628588815153" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
