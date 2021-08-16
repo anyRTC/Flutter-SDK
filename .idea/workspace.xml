@@ -24,9 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/src/utils/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/src/utils/settings.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628588836159</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="update android sdk">
+      <created>1629105479916</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1629105479916</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,13 +268,13 @@
     <MESSAGE value="add android sdk" />
     <MESSAGE value="update android native sdk" />
     <MESSAGE value="update android local preview" />
-    <MESSAGE value="update android sdk" />
     <MESSAGE value="update android" />
     <MESSAGE value="update dart" />
     <MESSAGE value="增加demo功能" />
     <MESSAGE value="update sdk" />
     <MESSAGE value="fix bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
+    <MESSAGE value="update android sdk" />
+    <option name="LAST_COMMIT_MESSAGE" value="update android sdk" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
