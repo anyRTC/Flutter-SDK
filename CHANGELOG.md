@@ -1,3 +1,6 @@
+## 4.2.5
+* update native Android sdk
+
 ## 4.2.4
 * 修复 Android 原生编码器问题
 
