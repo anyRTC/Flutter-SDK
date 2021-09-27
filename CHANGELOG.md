@@ -1,3 +1,6 @@
+## 4.2.6
+* update native ios sdk
+
 ## 4.2.5
 * update native Android sdk
 
