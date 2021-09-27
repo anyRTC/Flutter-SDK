@@ -742,10 +742,10 @@ class RtcStats {
   /// Client-server latency.
   int? lastmileDelay;
 
-  /// The packet loss rate (%) from the local client to Agora's edge server, before network countermeasures.
+  /// The packet loss rate (%) from the local client to anyrtc's edge server, before network countermeasures.
   int? txPacketLossRate;
 
-  /// The packet loss rate (%) from Agora's edge server to the local client, before network countermeasures.
+  /// The packet loss rate (%) from anyrtc's edge server to the local client, before network countermeasures.
   int? rxPacketLossRate;
 
   /// System CPU usage (%).

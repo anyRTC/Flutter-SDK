@@ -65,7 +65,7 @@ class RtcEngine with RtcEngineInterface {
 
   /// Creates an [RtcEngine] instance.
   ///
-  /// Unless otherwise specified, all the methods provided by the RtcEngine class are executed asynchronously. Agora recommends calling these methods in the same thread.
+  /// Unless otherwise specified, all the methods provided by the RtcEngine class are executed asynchronously. anyrtc recommends calling these methods in the same thread.
   ///
   /// **Note**
   /// - You must create an [RtcEngine] instance before calling any other method.

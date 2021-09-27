@@ -24,6 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/classes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/classes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/rtc_engine.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/rtc_engine.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +251,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629105479916</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="update sdk">
+      <created>1629106853760</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1629106853760</updated>
+    </task>
+    <task id="LOCAL-00025" summary="update sdk">
+      <created>1632732386381</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1632732386381</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,10 +287,10 @@
     <MESSAGE value="update android" />
     <MESSAGE value="update dart" />
     <MESSAGE value="增加demo功能" />
-    <MESSAGE value="update sdk" />
     <MESSAGE value="fix bugs" />
     <MESSAGE value="update android sdk" />
-    <option name="LAST_COMMIT_MESSAGE" value="update android sdk" />
+    <MESSAGE value="update sdk" />
+    <option name="LAST_COMMIT_MESSAGE" value="update sdk" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
