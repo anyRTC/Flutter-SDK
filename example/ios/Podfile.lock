@@ -1,5 +1,5 @@
 PODS:
-  - ar_rtc_engine (4.2.6):
+  - ar_rtc_engine (4.2.7):
     - ARtcKit_iOS (= 4.2.2.6)
     - Flutter
   - ARtcKit_iOS (4.2.2.6)
@@ -30,7 +30,7 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/permission_handler/ios"
 
 SPEC CHECKSUMS:
-  ar_rtc_engine: 10484310606501f97413cdf39d8e4e2d46909d79
+  ar_rtc_engine: bfe9e18e8675ecfb28af9e02a7122e0a8bec1405
   ARtcKit_iOS: 0a7af1f24ff4a637fcfae9b13e3f8c08e6b42a84
   e2e: 967b9b1fc533b7636a3b7a719f840c27f301fe1f
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
