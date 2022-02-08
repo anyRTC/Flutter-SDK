@@ -4,10 +4,10 @@ packages:
   ar_rtc_engine:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
-    version: "4.2.0"
+      name: ar_rtc_engine
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "4.2.7"
   archive:
     dependency: transitive
     description:
@@ -84,7 +84,7 @@ packages:
       name: cupertino_icons
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.4"
   e2e:
     dependency: "direct dev"
     description:
@@ -160,14 +160,14 @@ packages:
       name: permission_handler
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "5.0.1+1"
+    version: "5.1.0+2"
   permission_handler_platform_interface:
     dependency: transitive
     description:
       name: permission_handler_platform_interface
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.0.1"
+    version: "2.0.2"
   platform:
     dependency: transitive
     description:
