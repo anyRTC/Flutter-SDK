@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="">
+    <list default="true" id="dc8144b4-09ab-438d-b9ea-16e4e2fe8619" name="Default Changelist" comment="update sdk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
@@ -33,7 +33,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/liu/.android/avd/Pixel_4_XL_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/liu/.android/avd/Pixel_3a_XL_API_30.avd]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -273,7 +273,35 @@
       <option name="project" value="LOCAL" />
       <updated>1632732512518</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="update sdk">
+      <created>1632734172802</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1632734172802</updated>
+    </task>
+    <task id="LOCAL-00028" summary="update sdk">
+      <created>1637056946991</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1637056946991</updated>
+    </task>
+    <task id="LOCAL-00029" summary="update sdk">
+      <created>1644306018884</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1644306018884</updated>
+    </task>
+    <task id="LOCAL-00030" summary="update android native sdk">
+      <created>1644306345479</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1644306345479</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,7 +318,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add android sdk" />
-    <MESSAGE value="update android native sdk" />
     <MESSAGE value="update android local preview" />
     <MESSAGE value="update android" />
     <MESSAGE value="update dart" />
@@ -298,7 +325,8 @@
     <MESSAGE value="fix bugs" />
     <MESSAGE value="update android sdk" />
     <MESSAGE value="update sdk" />
-    <option name="LAST_COMMIT_MESSAGE" value="update sdk" />
+    <MESSAGE value="update android native sdk" />
+    <option name="LAST_COMMIT_MESSAGE" value="update android native sdk" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
