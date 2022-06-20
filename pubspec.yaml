@@ -5,21 +5,20 @@ homepage: https://www.anyrtc.io
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
-  flutter: '>=1.12.13+hotfix.6'
+  flutter: '>=2.0.0'
 dependencies:
   flutter:
     sdk: flutter
-  json_annotation: ^4.0.0
+  json_annotation: ^4.4.0
   
 dev_dependencies:
   integration_test:
+    sdk: flutter
   flutter_test:
     sdk: flutter
-  flutter_driver:
-    sdk: flutter
-  pedantic: ^1.11.0
-  build_runner: ^1.11.5
-  json_serializable: ^4.0.2
+  build_runner: ^2.1.7
+  json_serializable: ^6.1.1
+  flutter_lints: ^1.0.0
 flutter:
   plugin:
     platforms:
