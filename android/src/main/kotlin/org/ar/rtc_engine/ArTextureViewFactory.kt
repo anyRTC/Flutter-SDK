@@ -21,12 +21,12 @@ class ArTextureViewFactory(
         private val rtcChannelPlugin: ArRtcChannelPlugin
 ) : PlatformViewFactory(StandardMessageCodec.INSTANCE) {
     override fun create(context: Context?, viewId: Int, args: Any?): PlatformView {
-        return ARTextureView(context, messenger, viewId, args as? Map<*, *>, rtcEnginePlugin, rtcChannelPlugin)
+        return ARTextureView(context!!.applicationContext, messenger, viewId, args as? Map<*, *>, rtcEnginePlugin, rtcChannelPlugin)
     }
 }
 
 class ARTextureView(
-        context: Context?,
+        context: Context,
         messenger: BinaryMessenger,
         viewId: Int,
         args: Map<*, *>?,
@@ -60,7 +60,7 @@ class ARTextureView(
                 val parameters = mutableListOf<Any?>()
                 function.parameters.forEach { parameter ->
                     val map = call.arguments<Map<*, *>>()
-                    if (map.containsKey(parameter.name)) {
+                    if (map!!.containsKey(parameter.name)) {
                         parameters.add(map[parameter.name])
                     }
                 }

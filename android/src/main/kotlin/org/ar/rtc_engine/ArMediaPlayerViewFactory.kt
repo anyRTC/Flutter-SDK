@@ -11,8 +11,9 @@ import io.flutter.plugin.platform.PlatformViewFactory
 import org.ar.rtc.base.RtcMediaPlayerView
 
 class ArMediaPlayerViewFactory(private val playerPlugin: ArRtcMediaPlayerPlugin): PlatformViewFactory(StandardMessageCodec.INSTANCE) {
-    override fun create(context: Context, viewId: Int, args: Any?): PlatformView {
-        return ArMediaPlayerView(context.applicationContext,playerPlugin)
+
+    override fun create(context: Context?, viewId: Int, args: Any?): PlatformView {
+        return ArMediaPlayerView(context!!.applicationContext,playerPlugin)
     }
 }
 
