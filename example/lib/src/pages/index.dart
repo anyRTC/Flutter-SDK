@@ -126,6 +126,8 @@ class IndexState extends State<IndexPage> {
       // await for camera and mic permissions before pushing video page
       await _handleCameraAndMic(Permission.camera);
       await _handleCameraAndMic(Permission.microphone);
+      await _handleCameraAndMic(Permission.bluetooth);
+      await _handleCameraAndMic(Permission.bluetoothConnect);
       // push video page with given channel name
       await Navigator.push(
         context,
